@@ -1,0 +1,870 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_print" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Print</compoundname>
+    <derivedcompoundref refid="class_stream" prot="public" virt="non-virtual">Stream</derivedcompoundref>
+    <includes refid="spark__wiring__print_8h" local="no">spark_wiring_print.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_print_1ae922182b62afa3b8434397b7a54e70c4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Print::write_error</definition>
+        <argsstring></argsstring>
+        <name>write_error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="53" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_print_1abe7ee1c0946399820a61e1ec39419ee2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::printNumber</definition>
+        <argsstring>(unsigned long, uint8_t)</argsstring>
+        <name>printNumber</name>
+        <param>
+          <type>unsigned</type>
+          <declname>long</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a449fd5f2ab1fb43c3e3b10f53d18b1e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::printFloat</definition>
+        <argsstring>(double, uint8_t)</argsstring>
+        <name>printFloat</name>
+        <param>
+          <type>double</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_print_1a88a4a829fb5d589efb43955ad0cbddcc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Print::getWriteError</definition>
+        <argsstring>()</argsstring>
+        <name>getWriteError</name>
+        <briefdescription>
+<para>Return the last error code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="71" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="71" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1aec9ecf84cc6d9087a650def3cefc459e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Print::clearWriteError</definition>
+        <argsstring>()</argsstring>
+        <name>clearWriteError</name>
+        <briefdescription>
+<para>Clear the last error code. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="76" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a5be30d49adae2406a270c29ba9a3e0a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Print::write</definition>
+        <argsstring>(uint8_t)=0</argsstring>
+        <name>write</name>
+        <reimplementedby refid="class_spiffs_particle_file_1a073ab7a5701a616959685c58a79e3391">write</reimplementedby>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+<para>Write a single byte to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a5b40e0e9cab1f2fe5bb0cb22ffe5adda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::write</definition>
+        <argsstring>(const char *str)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Write a null-terminated c-string the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>point to a null-terminated c-string </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="88" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="88" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a88864e109589a5be9b0f5ba1327f8421" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>virtual size_t Print::write</definition>
+        <argsstring>(const uint8_t *buffer, size_t size)</argsstring>
+        <name>write</name>
+        <reimplementedby refid="class_spiffs_particle_file_1ada3fa1782a929e32adab1c161f9d5eeb">write</reimplementedby>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Write a bytes specified by a buffer and length to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the buffer </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>size in bytes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1acfe80773011eb17dfb52c2fba517a093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(const char[])</argsstring>
+        <name>print</name>
+        <param>
+          <type>const char</type>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a null-terminated array of char variables (a c-string) to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a1e411d07a8ffec5faf7ce485bac0f029" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(char)</argsstring>
+        <name>print</name>
+        <param>
+          <type>char</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a single character to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1ae35481e77567618140cd58d8b96d3747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(unsigned char value, int base=DEC)</argsstring>
+        <name>print</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an unsigned char (byte value) in the specified base to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="118" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1aa28ddbde83b14df73b41c919ecc4478f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(int value, int base=DEC)</argsstring>
+        <name>print</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an int the specified base to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1afcd7d3a184df961a502643e4fb638c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(unsigned int value, int base=DEC)</argsstring>
+        <name>print</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an unsigned int the specified base to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a0c663ac015ebc037ea044ba2e2cf2947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(long value, int base=DEC)</argsstring>
+        <name>print</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a long the specified base to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1acb8c6dcd4339b024436002aa9a6f4be2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(unsigned long value, int base=DEC)</argsstring>
+        <name>print</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a unsigned long the specified base to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1ad89472bdb6539423a42d350beec02ff4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(double value, int dec=2)</argsstring>
+        <name>print</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dec</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a double floating point value to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of decimal places to include for the fractional part. Default: 2 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="162" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a901b0f06ae34aab31b8fbb4298f0596e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::print</definition>
+        <argsstring>(const Printable &amp;)</argsstring>
+        <name>print</name>
+        <param>
+          <type>const Printable &amp;</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an object derived from Printable to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1ad337ce3f7977411b7d34d47a51e5737e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(const char[])</argsstring>
+        <name>println</name>
+        <param>
+          <type>const char</type>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a null-terminated array of char variables (a c-string) plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="176" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a80fdd92db4b396062586bcb3e08d3835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(char value)</argsstring>
+        <name>println</name>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a single character plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="181" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a000b3fd5b723cb6c7db0d3231a9ef2f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(unsigned char value, int base=DEC)</argsstring>
+        <name>println</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an unsigned char (byte value) in the specified base plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="190" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a82aa91bbd859f28a0a3b4869e5bfcadd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(int value, int base=DEC)</argsstring>
+        <name>println</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an int the specified base to plus a CRLF end-of-line terminator the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a2608232c1f10f654111ff447de16d60b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(unsigned int value, int base=DEC)</argsstring>
+        <name>println</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an unsigned int the specified base plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a82bbe59b28440c29e55ff3597eb45376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(long value, int base=DEC)</argsstring>
+        <name>println</name>
+        <param>
+          <type>long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a long the specified base plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="215" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1afa936d7e8dd329d9162f2cd28f42681e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(unsigned long value, int base=DEC)</argsstring>
+        <name>println</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>base</declname>
+          <defval>DEC</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a unsigned long the specified base plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>base</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal), OCT (octal), and BIN (binary). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a178b90baf9f74f0945f5c64aafec59ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(double value, int dec=2)</argsstring>
+        <name>println</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dec</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a double floating point value plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to print </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of decimal places to include for the fractional part. Default: 2 </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="230" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a20f9e104153b62e720c9b4c348b44f00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(const Printable &amp;)</argsstring>
+        <name>println</name>
+        <param>
+          <type>const Printable &amp;</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> an object derived from Printable plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a169b128f9e22f0c15883768f580541a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Print::println</definition>
+        <argsstring>(void)</argsstring>
+        <name>println</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="239" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1a08a461c9fee5fd8f5795d6e9f61e3d5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t Print::printf</definition>
+        <argsstring>(const char *format, Args... args)</argsstring>
+        <name>printf</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> using printf-style formatting to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>printf-style formatting string</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable arguments </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="253" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="253" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_print_1afa41aa5211c54b7b4d79b9286880c337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>size_t</type>
+        <definition>size_t Print::printlnf</definition>
+        <argsstring>(const char *format, Args... args)</argsstring>
+        <name>printlnf</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>Args...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_print" kindref="compound">Print</ref> using printf-style formatting plus a CRLF end-of-line terminator to the stream or file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>printf-style formatting string</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>variable arguments </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_print.h" line="266" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="266" bodyend="269"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Class for printing to a stream or file. </para>    </briefdescription>
+    <detaileddescription>
+<para>Various classes include serial, TCP network streams, and files inherit from this and can use these methods. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>Print</label>
+        <link refid="class_print"/>
+      </node>
+      <node id="2">
+        <label>SpiffsParticleFile</label>
+        <link refid="class_spiffs_particle_file"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Stream</label>
+        <link refid="class_stream"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="docs/src/spark_wiring_print.h" line="51" column="1" bodyfile="docs/src/spark_wiring_print.h" bodystart="50" bodyend="271"/>
+    <listofallmembers>
+      <member refid="class_print_1aec9ecf84cc6d9087a650def3cefc459e" prot="public" virt="non-virtual"><scope>Print</scope><name>clearWriteError</name></member>
+      <member refid="class_print_1a88a4a829fb5d589efb43955ad0cbddcc" prot="public" virt="non-virtual"><scope>Print</scope><name>getWriteError</name></member>
+      <member refid="class_print_1acfe80773011eb17dfb52c2fba517a093" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1a1e411d07a8ffec5faf7ce485bac0f029" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1ae35481e77567618140cd58d8b96d3747" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1aa28ddbde83b14df73b41c919ecc4478f" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1afcd7d3a184df961a502643e4fb638c52" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1a0c663ac015ebc037ea044ba2e2cf2947" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1acb8c6dcd4339b024436002aa9a6f4be2" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1ad89472bdb6539423a42d350beec02ff4" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1a901b0f06ae34aab31b8fbb4298f0596e" prot="public" virt="non-virtual"><scope>Print</scope><name>print</name></member>
+      <member refid="class_print_1a08a461c9fee5fd8f5795d6e9f61e3d5b" prot="public" virt="non-virtual"><scope>Print</scope><name>printf</name></member>
+      <member refid="class_print_1a449fd5f2ab1fb43c3e3b10f53d18b1e8" prot="private" virt="non-virtual"><scope>Print</scope><name>printFloat</name></member>
+      <member refid="class_print_1ad337ce3f7977411b7d34d47a51e5737e" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a80fdd92db4b396062586bcb3e08d3835" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a000b3fd5b723cb6c7db0d3231a9ef2f8" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a82aa91bbd859f28a0a3b4869e5bfcadd" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a2608232c1f10f654111ff447de16d60b" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a82bbe59b28440c29e55ff3597eb45376" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1afa936d7e8dd329d9162f2cd28f42681e" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a178b90baf9f74f0945f5c64aafec59ea" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a20f9e104153b62e720c9b4c348b44f00" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1a169b128f9e22f0c15883768f580541a2" prot="public" virt="non-virtual"><scope>Print</scope><name>println</name></member>
+      <member refid="class_print_1afa41aa5211c54b7b4d79b9286880c337" prot="public" virt="non-virtual"><scope>Print</scope><name>printlnf</name></member>
+      <member refid="class_print_1abe7ee1c0946399820a61e1ec39419ee2" prot="private" virt="non-virtual"><scope>Print</scope><name>printNumber</name></member>
+      <member refid="class_print_1a5be30d49adae2406a270c29ba9a3e0a3" prot="public" virt="pure-virtual"><scope>Print</scope><name>write</name></member>
+      <member refid="class_print_1a5b40e0e9cab1f2fe5bb0cb22ffe5adda" prot="public" virt="non-virtual"><scope>Print</scope><name>write</name></member>
+      <member refid="class_print_1a88864e109589a5be9b0f5ba1327f8421" prot="public" virt="virtual"><scope>Print</scope><name>write</name></member>
+      <member refid="class_print_1ae922182b62afa3b8434397b7a54e70c4" prot="private" virt="non-virtual"><scope>Print</scope><name>write_error</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs__free__obj__id__state" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_free_obj_id_state</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs__free__obj__id__state_1a2e23db65adf01c76cfb8dca971dbb565" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_id</type>
+        <definition>spiffs_obj_id spiffs_free_obj_id_state::min_obj_id</definition>
+        <argsstring></argsstring>
+        <name>min_obj_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.c" line="2060" column="1" bodyfile="src/spiffs_nucleus.c" bodystart="2060" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__free__obj__id__state_1abe3e0e24350052b8c90aed697f23b6f7" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_id</type>
+        <definition>spiffs_obj_id spiffs_free_obj_id_state::max_obj_id</definition>
+        <argsstring></argsstring>
+        <name>max_obj_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.c" line="2061" column="1" bodyfile="src/spiffs_nucleus.c" bodystart="2061" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__free__obj__id__state_1a4fe8c12907b7d0909f3ab4aa96a2fa42" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_free_obj_id_state::compaction</definition>
+        <argsstring></argsstring>
+        <name>compaction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.c" line="2062" column="1" bodyfile="src/spiffs_nucleus.c" bodystart="2062" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__free__obj__id__state_1a570a92aa2ae0ad99eaa0d15e872ca650" prot="public" static="no" mutable="no">
+        <type>const u8_t *</type>
+        <definition>const u8_t* spiffs_free_obj_id_state::conflicting_name</definition>
+        <argsstring></argsstring>
+        <name>conflicting_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.c" line="2063" column="1" bodyfile="src/spiffs_nucleus.c" bodystart="2063" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/spiffs_nucleus.c" line="2059" column="1" bodyfile="src/spiffs_nucleus.c" bodystart="2059" bodyend="2064"/>
+    <listofallmembers>
+      <member refid="structspiffs__free__obj__id__state_1a4fe8c12907b7d0909f3ab4aa96a2fa42" prot="public" virt="non-virtual"><scope>spiffs_free_obj_id_state</scope><name>compaction</name></member>
+      <member refid="structspiffs__free__obj__id__state_1a570a92aa2ae0ad99eaa0d15e872ca650" prot="public" virt="non-virtual"><scope>spiffs_free_obj_id_state</scope><name>conflicting_name</name></member>
+      <member refid="structspiffs__free__obj__id__state_1abe3e0e24350052b8c90aed697f23b6f7" prot="public" virt="non-virtual"><scope>spiffs_free_obj_id_state</scope><name>max_obj_id</name></member>
+      <member refid="structspiffs__free__obj__id__state_1a2e23db65adf01c76cfb8dca971dbb565" prot="public" virt="non-virtual"><scope>spiffs_free_obj_id_state</scope><name>min_obj_id</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

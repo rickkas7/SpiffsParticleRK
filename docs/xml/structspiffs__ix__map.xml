@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs__ix__map" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_ix_map</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs__ix__map_1a16c980d6657eb2916fcede33bd062004" prot="public" static="no" mutable="no">
+        <type>spiffs_page_ix *</type>
+        <definition>spiffs_page_ix* spiffs_ix_map::map_buf</definition>
+        <argsstring></argsstring>
+        <name>map_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="336" column="1" bodyfile="src/spiffs.h" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__ix__map_1a1a51b6b7e57415165a7c9079894a1a88" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_ix_map::offset</definition>
+        <argsstring></argsstring>
+        <name>offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="338" column="1" bodyfile="src/spiffs.h" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__ix__map_1a34ffaa7208e9495eaab9f6271f912995" prot="public" static="no" mutable="no">
+        <type>spiffs_span_ix</type>
+        <definition>spiffs_span_ix spiffs_ix_map::start_spix</definition>
+        <argsstring></argsstring>
+        <name>start_spix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="340" column="1" bodyfile="src/spiffs.h" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__ix__map_1af82f3c0899fe830e951ef796bee8b348" prot="public" static="no" mutable="no">
+        <type>spiffs_span_ix</type>
+        <definition>spiffs_span_ix spiffs_ix_map::end_spix</definition>
+        <argsstring></argsstring>
+        <name>end_spix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="342" column="1" bodyfile="src/spiffs.h" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/spiffs.h" line="334" column="1" bodyfile="src/spiffs.h" bodystart="334" bodyend="343"/>
+    <listofallmembers>
+      <member refid="structspiffs__ix__map_1af82f3c0899fe830e951ef796bee8b348" prot="public" virt="non-virtual"><scope>spiffs_ix_map</scope><name>end_spix</name></member>
+      <member refid="structspiffs__ix__map_1a16c980d6657eb2916fcede33bd062004" prot="public" virt="non-virtual"><scope>spiffs_ix_map</scope><name>map_buf</name></member>
+      <member refid="structspiffs__ix__map_1a1a51b6b7e57415165a7c9079894a1a88" prot="public" virt="non-virtual"><scope>spiffs_ix_map</scope><name>offset</name></member>
+      <member refid="structspiffs__ix__map_1a34ffaa7208e9495eaab9f6271f912995" prot="public" virt="non-virtual"><scope>spiffs_ix_map</scope><name>start_spix</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

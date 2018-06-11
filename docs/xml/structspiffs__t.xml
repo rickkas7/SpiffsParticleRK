@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs__t" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_t</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs__t_1a7f9247b4b84e6b6a6f3b988fdf83ba99" prot="public" static="no" mutable="no">
+        <type><ref refid="structspiffs__config" kindref="compound">spiffs_config</ref></type>
+        <definition>spiffs_config spiffs_t::cfg</definition>
+        <argsstring></argsstring>
+        <name>cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="240" column="1" bodyfile="src/spiffs.h" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a8554c5fc24edbd495ed55da15ea172af" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::block_count</definition>
+        <argsstring></argsstring>
+        <name>block_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="242" column="1" bodyfile="src/spiffs.h" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a0e0cb263ec86272f5a75503d362582c7" prot="public" static="no" mutable="no">
+        <type>spiffs_block_ix</type>
+        <definition>spiffs_block_ix spiffs_t::free_cursor_block_ix</definition>
+        <argsstring></argsstring>
+        <name>free_cursor_block_ix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="245" column="1" bodyfile="src/spiffs.h" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1aa98ef3edf530c19d0847f900720f3499" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int spiffs_t::free_cursor_obj_lu_entry</definition>
+        <argsstring></argsstring>
+        <name>free_cursor_obj_lu_entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="247" column="1" bodyfile="src/spiffs.h" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1ab61206cd5cbcaf8ee4bcd1cdf2fb53ad" prot="public" static="no" mutable="no">
+        <type>spiffs_block_ix</type>
+        <definition>spiffs_block_ix spiffs_t::cursor_block_ix</definition>
+        <argsstring></argsstring>
+        <name>cursor_block_ix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="249" column="1" bodyfile="src/spiffs.h" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1aaac9760dde13fbb11ba81871ecee6b7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int spiffs_t::cursor_obj_lu_entry</definition>
+        <argsstring></argsstring>
+        <name>cursor_obj_lu_entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="251" column="1" bodyfile="src/spiffs.h" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1aadc62737ea37cf850aa84f7cb0faabb2" prot="public" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* spiffs_t::lu_work</definition>
+        <argsstring></argsstring>
+        <name>lu_work</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="254" column="1" bodyfile="src/spiffs.h" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1af48f680e30ac20c12412545af0515201" prot="public" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* spiffs_t::work</definition>
+        <argsstring></argsstring>
+        <name>work</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="256" column="1" bodyfile="src/spiffs.h" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a4471d7ec110042b1c68cb06311b1daf9" prot="public" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* spiffs_t::fd_space</definition>
+        <argsstring></argsstring>
+        <name>fd_space</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="258" column="1" bodyfile="src/spiffs.h" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a1538b44ff998bbc79b59d5adbffeb9dc" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::fd_count</definition>
+        <argsstring></argsstring>
+        <name>fd_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="260" column="1" bodyfile="src/spiffs.h" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a5a2359dde97d3ce7158b0ed37ecca219" prot="public" static="no" mutable="no">
+        <type>s32_t</type>
+        <definition>s32_t spiffs_t::err_code</definition>
+        <argsstring></argsstring>
+        <name>err_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="263" column="1" bodyfile="src/spiffs.h" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a70cd3e118549e8ec2f20a34725a91a22" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::free_blocks</definition>
+        <argsstring></argsstring>
+        <name>free_blocks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="266" column="1" bodyfile="src/spiffs.h" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1ac567c1d29a7c3c91c8e9ad480a5f4c59" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::stats_p_allocated</definition>
+        <argsstring></argsstring>
+        <name>stats_p_allocated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="268" column="1" bodyfile="src/spiffs.h" bodystart="268" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1ad261e9db98b460b8e514ef11eaed5220" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::stats_p_deleted</definition>
+        <argsstring></argsstring>
+        <name>stats_p_deleted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="270" column="1" bodyfile="src/spiffs.h" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a57d679557baf30480c0b435461e34f44" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t spiffs_t::cleaning</definition>
+        <argsstring></argsstring>
+        <name>cleaning</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="272" column="1" bodyfile="src/spiffs.h" bodystart="272" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a98c1ac3d41d58deb2f667856901b714f" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_id</type>
+        <definition>spiffs_obj_id spiffs_t::max_erase_count</definition>
+        <argsstring></argsstring>
+        <name>max_erase_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="274" column="1" bodyfile="src/spiffs.h" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a75d6ec264f80cd51676417ce81a2e0b7" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::stats_gc_runs</definition>
+        <argsstring></argsstring>
+        <name>stats_gc_runs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="277" column="1" bodyfile="src/spiffs.h" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a1cbc112befd2dd43441b81f957f6328f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* spiffs_t::cache</definition>
+        <argsstring></argsstring>
+        <name>cache</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="282" column="1" bodyfile="src/spiffs.h" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a189fb2ddc2eb3822edf0024369dd302c" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::cache_size</definition>
+        <argsstring></argsstring>
+        <name>cache_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="284" column="1" bodyfile="src/spiffs.h" bodystart="284" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a03c2879c5e9cf780c983a2661eedf56e" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::cache_hits</definition>
+        <argsstring></argsstring>
+        <name>cache_hits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="286" column="1" bodyfile="src/spiffs.h" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a1e1ccfa9edf8265df4fd40705336e3a5" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::cache_misses</definition>
+        <argsstring></argsstring>
+        <name>cache_misses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="287" column="1" bodyfile="src/spiffs.h" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a5eb5f40440f41dfca5e0a3aba520e4b4" prot="public" static="no" mutable="no">
+        <type>spiffs_check_callback</type>
+        <definition>spiffs_check_callback spiffs_t::check_cb_f</definition>
+        <argsstring></argsstring>
+        <name>check_cb_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="292" column="1" bodyfile="src/spiffs.h" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1ab3da90414142391c3eeeb5905b7eb30b" prot="public" static="no" mutable="no">
+        <type>spiffs_file_callback</type>
+        <definition>spiffs_file_callback spiffs_t::file_cb_f</definition>
+        <argsstring></argsstring>
+        <name>file_cb_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="294" column="1" bodyfile="src/spiffs.h" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a542d258081a8be645319ff597cfcedd4" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t spiffs_t::mounted</definition>
+        <argsstring></argsstring>
+        <name>mounted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="296" column="1" bodyfile="src/spiffs.h" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1a00dfd42d670514d50b7a906b75e45a44" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* spiffs_t::user_data</definition>
+        <argsstring></argsstring>
+        <name>user_data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="298" column="1" bodyfile="src/spiffs.h" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__t_1acaf98085b60c8f1a916bb4023a2bd3be" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_t::config_magic</definition>
+        <argsstring></argsstring>
+        <name>config_magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="300" column="1" bodyfile="src/spiffs.h" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="33">
+        <label>spiffs_t</label>
+        <link refid="structspiffs__t"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>file_cb_f</edgelabel>
+          <edgelabel>check_cb_f</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>cfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="34">
+        <label>spiffs_config</label>
+        <link refid="structspiffs__config"/>
+        <childnode refid="33" relation="usage">
+          <edgelabel>hal_erase_f</edgelabel>
+          <edgelabel>hal_read_f</edgelabel>
+          <edgelabel>hal_write_f</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/spiffs.h" line="238" column="1" bodyfile="src/spiffs.h" bodystart="238" bodyend="301"/>
+    <listofallmembers>
+      <member refid="structspiffs__t_1a8554c5fc24edbd495ed55da15ea172af" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>block_count</name></member>
+      <member refid="structspiffs__t_1a1cbc112befd2dd43441b81f957f6328f" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cache</name></member>
+      <member refid="structspiffs__t_1a03c2879c5e9cf780c983a2661eedf56e" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cache_hits</name></member>
+      <member refid="structspiffs__t_1a1e1ccfa9edf8265df4fd40705336e3a5" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cache_misses</name></member>
+      <member refid="structspiffs__t_1a189fb2ddc2eb3822edf0024369dd302c" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cache_size</name></member>
+      <member refid="structspiffs__t_1a7f9247b4b84e6b6a6f3b988fdf83ba99" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cfg</name></member>
+      <member refid="structspiffs__t_1a5eb5f40440f41dfca5e0a3aba520e4b4" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>check_cb_f</name></member>
+      <member refid="structspiffs__t_1a57d679557baf30480c0b435461e34f44" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cleaning</name></member>
+      <member refid="structspiffs__t_1acaf98085b60c8f1a916bb4023a2bd3be" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>config_magic</name></member>
+      <member refid="structspiffs__t_1ab61206cd5cbcaf8ee4bcd1cdf2fb53ad" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cursor_block_ix</name></member>
+      <member refid="structspiffs__t_1aaac9760dde13fbb11ba81871ecee6b7c" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>cursor_obj_lu_entry</name></member>
+      <member refid="structspiffs__t_1a5a2359dde97d3ce7158b0ed37ecca219" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>err_code</name></member>
+      <member refid="structspiffs__t_1a1538b44ff998bbc79b59d5adbffeb9dc" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>fd_count</name></member>
+      <member refid="structspiffs__t_1a4471d7ec110042b1c68cb06311b1daf9" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>fd_space</name></member>
+      <member refid="structspiffs__t_1ab3da90414142391c3eeeb5905b7eb30b" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>file_cb_f</name></member>
+      <member refid="structspiffs__t_1a70cd3e118549e8ec2f20a34725a91a22" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>free_blocks</name></member>
+      <member refid="structspiffs__t_1a0e0cb263ec86272f5a75503d362582c7" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>free_cursor_block_ix</name></member>
+      <member refid="structspiffs__t_1aa98ef3edf530c19d0847f900720f3499" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>free_cursor_obj_lu_entry</name></member>
+      <member refid="structspiffs__t_1aadc62737ea37cf850aa84f7cb0faabb2" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>lu_work</name></member>
+      <member refid="structspiffs__t_1a98c1ac3d41d58deb2f667856901b714f" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>max_erase_count</name></member>
+      <member refid="structspiffs__t_1a542d258081a8be645319ff597cfcedd4" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>mounted</name></member>
+      <member refid="structspiffs__t_1a75d6ec264f80cd51676417ce81a2e0b7" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>stats_gc_runs</name></member>
+      <member refid="structspiffs__t_1ac567c1d29a7c3c91c8e9ad480a5f4c59" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>stats_p_allocated</name></member>
+      <member refid="structspiffs__t_1ad261e9db98b460b8e514ef11eaed5220" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>stats_p_deleted</name></member>
+      <member refid="structspiffs__t_1a00dfd42d670514d50b7a906b75e45a44" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>user_data</name></member>
+      <member refid="structspiffs__t_1af48f680e30ac20c12412545af0515201" prot="public" virt="non-virtual"><scope>spiffs_t</scope><name>work</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

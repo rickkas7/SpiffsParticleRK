@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_s_p_i_f_f_s___p_a_c_k_e_d" kind="struct" language="C++" prot="public">
+    <compoundname>SPIFFS_PACKED</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a610766bf067526f5e600cde282107595" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_id</type>
+        <definition>spiffs_obj_id SPIFFS_PACKED::obj_id</definition>
+        <argsstring></argsstring>
+        <name>obj_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="485" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1ad2b494d63964b70b86c66a27eec1e208" prot="public" static="no" mutable="no">
+        <type>spiffs_span_ix</type>
+        <definition>spiffs_span_ix SPIFFS_PACKED::span_ix</definition>
+        <argsstring></argsstring>
+        <name>span_ix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="487" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="487" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a31b830ab36a015849ca211145e2c7ffe" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t SPIFFS_PACKED::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="489" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="489" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a57781310180db784f3476def6f7506b7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_s_p_i_f_f_s___p_a_c_k_e_d" kindref="compound">spiffs_page_header</ref></type>
+        <definition>spiffs_page_header SPIFFS_PACKED::p_hdr</definition>
+        <argsstring></argsstring>
+        <name>p_hdr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="499" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a8b303b250d800a524a9ff51787951f13" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t SPIFFS_PACKED::_align</definition>
+        <argsstring>[4 -((sizeof(spiffs_page_header)&amp;3)==0 ? 4 :(sizeof(spiffs_page_header)&amp;3))]</argsstring>
+        <name>_align</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="501" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="501" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1aea58187be56f0bb3471c0e7e1c7ba6d5" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t SPIFFS_PACKED::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="503" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="503" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a200b626db130ce8dc2a3c64f13063a98" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_type</type>
+        <definition>spiffs_obj_type SPIFFS_PACKED::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="505" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="505" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a3072e1f0b4bf4fd48e546c0a91986cdc" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t SPIFFS_PACKED::name[SPIFFS_OBJ_NAME_LEN]</definition>
+        <argsstring>[SPIFFS_OBJ_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs_nucleus.h" line="507" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="507" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="29">
+        <label>SPIFFS_PACKED</label>
+        <link refid="struct_s_p_i_f_f_s___p_a_c_k_e_d"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>p_hdr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/spiffs_nucleus.h" line="483" column="1" bodyfile="src/spiffs_nucleus.h" bodystart="483" bodyend="490"/>
+    <listofallmembers>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a8b303b250d800a524a9ff51787951f13" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>_align</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a31b830ab36a015849ca211145e2c7ffe" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>flags</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a3072e1f0b4bf4fd48e546c0a91986cdc" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>name</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a610766bf067526f5e600cde282107595" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>obj_id</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a57781310180db784f3476def6f7506b7" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>p_hdr</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1aea58187be56f0bb3471c0e7e1c7ba6d5" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>size</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1ad2b494d63964b70b86c66a27eec1e208" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>span_ix</name></member>
+      <member refid="struct_s_p_i_f_f_s___p_a_c_k_e_d_1a200b626db130ce8dc2a3c64f13063a98" prot="public" virt="non-virtual"><scope>SPIFFS_PACKED</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

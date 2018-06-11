@@ -1,0 +1,1533 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_spiffs_particle" kind="class" language="C++" prot="public">
+    <compoundname>SpiffsParticle</compoundname>
+    <includes refid="_spiffs_particle_r_k_8h" local="no">SpiffsParticleRK.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_spiffs_particle_1a04dd9e0789c88de8eaffb9bcf5142d78" prot="private" static="no" mutable="no">
+        <type>SpiFlashBase &amp;</type>
+        <definition>SpiFlashBase&amp; SpiffsParticle::flash</definition>
+        <argsstring></argsstring>
+        <name>flash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="642" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a6bd569b2fd91eb30a71efab7ca7210f1" prot="private" static="no" mutable="no">
+        <type><ref refid="structspiffs__config" kindref="compound">spiffs_config</ref></type>
+        <definition>spiffs_config SpiffsParticle::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="643" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a4323fc03ea543392e69e60a6c6cba333" prot="private" static="no" mutable="no">
+        <type><ref refid="structspiffs__t" kindref="compound">spiffs_t</ref></type>
+        <definition>spiffs_t SpiffsParticle::fs</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="644" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1adbe865bbeedc27b3002bef11bd4a2cc4" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SpiffsParticle::maxOpenFiles</definition>
+        <argsstring></argsstring>
+        <name>maxOpenFiles</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="645" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a8bac0387596356da7664dc0aeebd1bf7" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SpiffsParticle::cachePages</definition>
+        <argsstring></argsstring>
+        <name>cachePages</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="646" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1ac669600c6a10fe3d5d45a87a1c75f638" prot="private" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* SpiffsParticle::workBuffer</definition>
+        <argsstring></argsstring>
+        <name>workBuffer</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="647" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a910d12e50fdc3d709adb7e4ac8a2afe8" prot="private" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* SpiffsParticle::fdBuffer</definition>
+        <argsstring></argsstring>
+        <name>fdBuffer</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="648" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a2447f3903764055dcdb5aca2fedd4471" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SpiffsParticle::fdBufferSize</definition>
+        <argsstring></argsstring>
+        <name>fdBufferSize</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="649" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1abd0aebb68f741f3691bd52f49a4e78b5" prot="private" static="no" mutable="no">
+        <type>u8_t *</type>
+        <definition>u8_t* SpiffsParticle::cacheBuffer</definition>
+        <argsstring></argsstring>
+        <name>cacheBuffer</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="650" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a83280e8bc458250df18ea19930326378" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t SpiffsParticle::cacheBufferSize</definition>
+        <argsstring></argsstring>
+        <name>cacheBufferSize</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="651" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a54a7316d2cf29b8213e7458c6cf153f9" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SpiffsParticle::lowLevelDebug</definition>
+        <argsstring></argsstring>
+        <name>lowLevelDebug</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="652" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_spiffs_particle_1a4c8cfa33e7ae5c6bdc42316f80ec8167" prot="private" static="no" mutable="no">
+        <type>spiffs_check_callback</type>
+        <definition>spiffs_check_callback SpiffsParticle::userCheckCallback</definition>
+        <argsstring></argsstring>
+        <name>userCheckCallback</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="653" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_spiffs_particle_1a3c3749f4cfae7c6ef1721b84e0964a56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SpiffsParticle::SpiffsParticle</definition>
+        <argsstring>(SpiFlashBase &amp;flash)</argsstring>
+        <name>SpiffsParticle</name>
+        <param>
+          <type>SpiFlashBase &amp;</type>
+          <declname>flash</declname>
+        </param>
+        <briefdescription>
+<para>Create a <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> file system object. Note that you must mount the file system before using it! </para>        </briefdescription>
+        <detaileddescription>
+<para>It&apos;s safe (and common) to create the <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> object as a global variable. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="244" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="12" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a78ce9c8fdcc988cb4838572cb22d9922" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>SpiffsParticle::~SpiffsParticle</definition>
+        <argsstring>()</argsstring>
+        <name>~SpiffsParticle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="245" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a6d58b2716f9ae5b1f5508f4e82e8b6c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withPhysicalSize</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withPhysicalSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the size of the flash file system in bytes, relative to the physical start address. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="250" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="250" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a68685e7a6143d550c1f31f0046187426" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withPhysicalAddr</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withPhysicalAddr</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the start address in the flash for the file system (default: 0) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="255" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="255" bodyend="255"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1af99c2e3bdc38de7f33761b97a2680cec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withPhysicalBlockSize</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withPhysicalBlockSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the physical block size (default: 4096) </para>        </briefdescription>
+        <detaileddescription>
+<para>This is the size of the erase block, or the sector size in the SpiFlash class. It can&apos;t be smaller than the sector size, and it can&apos;t be larger than the logicalBlockSize, so pretty much 4096 is what you should leave it at. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="264" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="264" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a9f04b3f3f10aacad3281a8abaf14bac6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withLogicalBlockSize</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withLogicalBlockSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the logical block size (default: 4096) </para>        </briefdescription>
+        <detaileddescription>
+<para>This can&apos;t be smaller than the physical block size or sector size (4096), but it could be larger. Making it larger might make sense if you have a small number of really large files, but usually 4096 is a reasonable value. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="273" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="273" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1afb7595fab7db056f0c4594ee5fa2cd48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withLogicalPageSize</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withLogicalPageSize</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the logical page size (default: 256) </para>        </briefdescription>
+        <detaileddescription>
+<para>This must be greater than or equal to the physical page size, which is typically 256 for most flash chips. Note that there&apos;s a work buffer of 2 * logical page size required for mounting a volume. It&apos;s rarely helpful to change this from the default, and it can&apos;t be larger than the logical block size, and doesn&apos;t really make any sense to make it larger than the physical block size (4096 bytes). So just leave it at 256. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="283" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="283" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a0a88791b69d2711a32b31cef465f2ebe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withMaxOpenFiles</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withMaxOpenFiles</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the maximum number of open files (default: 4) </para>        </briefdescription>
+        <detaileddescription>
+<para>Each open file descriptor requires 32 bytes of RAM. For the default of 4, this is 128 bytes allocated at mount time.</para><para>Note that you must call this before <ref refid="class_spiffs_particle_1a55ce37570d764bb8d00698903211fee8" kindref="member">mount()</ref>. Calling it after will have no effect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="292" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="292" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1afc11a0266e8be6fb84ec4735d58281cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withCachePages</definition>
+        <argsstring>(size_t value)</argsstring>
+        <name>withCachePages</name>
+        <param>
+          <type>size_t</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Sets the desired not of cache pages (default: 2) </para>        </briefdescription>
+        <detaileddescription>
+<para>The cache requires (logical page size + 32) * cachePages + 40 bytes. For the default logical page size of 256 and cache pages of 2, this is 616 bytes allocated at mount time.</para><para>Note that you must call this before <ref refid="class_spiffs_particle_1a55ce37570d764bb8d00698903211fee8" kindref="member">mount()</ref>. Calling it after will have no effect. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="302" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="302" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a12f034a87b98381d976f81885b66b87a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> &amp;</type>
+        <definition>SpiffsParticle&amp; SpiffsParticle::withLowLevelDebug</definition>
+        <argsstring>(bool value=true)</argsstring>
+        <name>withLowLevelDebug</name>
+        <param>
+          <type>bool</type>
+          <declname>value</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Enable (or disable) low level debug mode. </para>        </briefdescription>
+        <detaileddescription>
+<para>This mainly logs individual read and write calls. The SPIFFS file system likes to write two byte values as part of the magic, and low-level debug will print these out. If you&apos;re having weird file system corruption errors, using this along with enabling trace logging may be helpful. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="311" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="311" bodyend="311"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a55ce37570d764bb8d00698903211fee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::mount</definition>
+        <argsstring>(spiffs_check_callback callback)</argsstring>
+        <name>mount</name>
+        <param>
+          <type>spiffs_check_callback</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+<para>Mount the file system. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>SPIFFS_OK (0) on success or a negative error code. The most common error is SPIFFS_ERR_NOT_A_FS (-10025) which means you need to format the file system.</para></simplesect>
+Note that you must always try to mount the file system before performing any other operations, including format. It allocates buffers for the work buffer, file handles, and cache buffer, so you should do it early in setup if possible to make sure there is memory available.</para><para>In addition to the standard SPIFFS_ERR errors, the <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> port can also return SPIFFS_ERR_OUT_OF_MEMORY if the buffers cannot be allocated during mount.</para><para>The memory allocated to buffers when mounting is:</para><para><itemizedlist>
+<listitem><para>Work buffers (2 * logical page size), default is 2 * 256 = 512</para></listitem><listitem><para>File descriptor buffers (32 * max open files), default is 32 * 4 = 128</para></listitem><listitem><para>Cache (logical page size + 32) * cachePages + 40 byte, default is (256 + 32) * 2 + 40 = 616</para></listitem></itemizedlist>
+</para><para>Thus the total RAM allocated during mount is by default is 1256 bytes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="334" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="35" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a2f1b8abb2c89f1935675240430907f7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiffsParticle::unmount</definition>
+        <argsstring>()</argsstring>
+        <name>unmount</name>
+        <briefdescription>
+<para>Unmount the file system. All file handles will be flushed of any cached writes and closed. </para>        </briefdescription>
+        <detaileddescription>
+<para>This also frees the file descriptor, work, and cache buffers. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="341" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="61" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a31500330ba98a081bc7b41f027406bf0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::format</definition>
+        <argsstring>()</argsstring>
+        <name>format</name>
+        <briefdescription>
+<para>Format the file system. </para>        </briefdescription>
+        <detaileddescription>
+<para>You typically do this when mount returns SPIFFS_ERR_NOT_A_FS. Note that you cannot format a valid file system, you&apos;ll need to erase the sectors first. Also, you must try mounting again after format. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="349" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="349" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a377b6476c59d353cedc0c666a3998af4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::erase</definition>
+        <argsstring>()</argsstring>
+        <name>erase</name>
+        <briefdescription>
+<para>Erase the sectors used by the file system. Obviously all data will be lost. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns error SPIFFS_ERR_MOUNTED if the file system is currently mounted; you must unmount it before erasing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="357" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="74" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1ac2714880969a1b6625de152105e291f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::creat</definition>
+        <argsstring>(const char *path, spiffs_mode mode=0777)</argsstring>
+        <name>creat</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>spiffs_mode</type>
+          <declname>mode</declname>
+          <defval>0777</defval>
+        </param>
+        <briefdescription>
+<para>Creates a new file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the new file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored, for posix compliance. This is an optional parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Note that there are no subdirectories in SPIFFS and the maximum filename length is 32. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="367" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="367" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a0f13439808a65feb0d307de157598b96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>spiffs_file</type>
+        <definition>spiffs_file SpiffsParticle::open</definition>
+        <argsstring>(const char *path, spiffs_flags flags, spiffs_mode mode=0777)</argsstring>
+        <name>open</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>spiffs_flags</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>spiffs_mode</type>
+          <declname>mode</declname>
+          <defval>0777</defval>
+        </param>
+        <briefdescription>
+<para>Opens or creates a file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the new file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the flags for the open command, can be combinations of SPIFFS_O_APPEND, SPIFFS_O_TRUNC, SPIFFS_O_CREAT, SPIFFS_O_RDONLY, SPIFFS_O_WRONLY, SPIFFS_O_RDWR, SPIFFS_O_DIRECT, SPIFFS_O_EXCL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored, for posix compliance. This is an optional parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+You can combine these options, so for example to create (if necessary) and open, use SPIFFS_O_CREAT|SPIFFS_O_RDWR.</para><para>Note that there are no subdirectories in SPIFFS and the maximum filename length is 32. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="382" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="382" bodyend="382"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a19e88cd7e5e352ab0222ac8d5ece430b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_spiffs_particle_file" kindref="compound">SpiffsParticleFile</ref></type>
+        <definition>SpiffsParticleFile SpiffsParticle::openFile</definition>
+        <argsstring>(const char *path, spiffs_flags flags, spiffs_mode mode=0777)</argsstring>
+        <name>openFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>spiffs_flags</type>
+          <declname>flags</declname>
+        </param>
+        <param>
+          <type>spiffs_mode</type>
+          <declname>mode</declname>
+          <defval>0777</defval>
+        </param>
+        <briefdescription>
+<para>Open a file and return a <ref refid="class_spiffs_particle_file" kindref="compound">SpiffsParticleFile</ref> object to easily manipulate it using Arduino/Wiring style calls. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the new file </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the flags for the open command, can be combinations of SPIFFS_O_APPEND, SPIFFS_O_TRUNC, SPIFFS_O_CREAT, SPIFFS_O_RDONLY, SPIFFS_O_WRONLY, SPIFFS_O_RDWR, SPIFFS_O_DIRECT, SPIFFS_O_EXCL </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ignored, for posix compliance. This is an optional parameter.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+You can combine these options, so for example to create (if necessary) and open, use SPIFFS_O_CREAT|SPIFFS_O_RDWR.</para><para>Note that there are no subdirectories in SPIFFS and the maximum filename length is 32. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="397" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="397" bodyend="397"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a39cfb5a9c5bc2ae9f99a3c5c3bf4e64f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::read</definition>
+        <argsstring>(spiffs_file fh, void *buf, s32_t len)</argsstring>
+        <name>read</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>s32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Reads from given filehandle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where to put read data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how much to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes read, or -1 if error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="406" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="406" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a24c19c610c1bc97647d8797ed632a814" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::write</definition>
+        <argsstring>(spiffs_file fh, const void *buf, s32_t len)</argsstring>
+        <name>write</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>s32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Writes to given filehandle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the data to write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how much to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes written, or -1 if error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="415" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="415" bodyend="415"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a8875ae5bd2177da2b046ac5b6254ec85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::lseek</definition>
+        <argsstring>(spiffs_file fh, s32_t offs, int whence)</argsstring>
+        <name>lseek</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <param>
+          <type>s32_t</type>
+          <declname>offs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>whence</declname>
+        </param>
+        <briefdescription>
+<para>Moves the read/write file offset. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>how much/where to move the offset. Can be negative. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>whence</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if SPIFFS_SEEK_SET, the file offset shall be set to offset bytes if SPIFFS_SEEK_CUR, the file offset shall be set to its current location plus offset if SPIFFS_SEEK_END, the file offset shall be set to the size of the file plus offset, which should be negative</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting offset is returned or negative if error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="427" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="427" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1abb6a31d8bb30bbe0816e89f8d15cfd9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::eof</definition>
+        <argsstring>(spiffs_file fh)</argsstring>
+        <name>eof</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <briefdescription>
+<para>Check if EOF reached. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to check </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="434" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="434" bodyend="434"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a38ddf851ffd2e4ade100114bfe4ca524" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::tell</definition>
+        <argsstring>(spiffs_file fh)</argsstring>
+        <name>tell</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <briefdescription>
+<para>Get position in file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to check </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="440" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="440" bodyend="440"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a9ee304e19b76f4a68e8f772a92bbd104" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::remove</definition>
+        <argsstring>(const char *path)</argsstring>
+        <name>remove</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Removes a file by path. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the file to remove </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="446" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="446" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a19073c6608c352f93e4a5cff6bb95fb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::fremove</definition>
+        <argsstring>(spiffs_file fh)</argsstring>
+        <name>fremove</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <briefdescription>
+<para>Removes a file by filehandle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to remove </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="452" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="452" bodyend="452"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1af52be85536c06520864bd4918b3fe927" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::truncate</definition>
+        <argsstring>(const char *path, s32_t len)</argsstring>
+        <name>truncate</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>s32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Truncate a file by path. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the file to remove </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the length to truncate to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Note: In POSIX, len can be larger than the file size to make the file larger, but this does not work in SPIFFS. len must be less than or equal to the file size. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="462" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="462" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a9bcb248af1aa3fe66b6a853304765e35" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::ftruncate</definition>
+        <argsstring>(spiffs_file fh, s32_t len)</argsstring>
+        <name>ftruncate</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <param>
+          <type>s32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+<para>Truncate a file by filehandle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to remove </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>len</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the length to truncate to</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Note: In POSIX, len can be larger than the file size to make the file larger, but this does not work in SPIFFS. len must be less than or equal to the file size. See: <ulink url="https://github.com/pellepl/spiffs/issues/107">https://github.com/pellepl/spiffs/issues/107</ulink> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="473" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="473" bodyend="473"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a42bc28baf22af229ca371a0a1e2d16a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::stat</definition>
+        <argsstring>(const char *path, spiffs_stat *s)</argsstring>
+        <name>stat</name>
+        <param>
+          <type>const char *</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type><ref refid="structspiffs__stat" kindref="compound">spiffs_stat</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Gets file status by path. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the path of the file to stat </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stat struct to populate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+You will typically only need the type and name fields of the stats structure. type is SPIFFS_TYPE_FILE or SPIFFS_TYPE_DIR name is the name (c-string) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="484" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="484" bodyend="484"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a2ea24c9aded8801cafd373b11dd912d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::fstat</definition>
+        <argsstring>(spiffs_file fh, spiffs_stat *s)</argsstring>
+        <name>fstat</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <param>
+          <type><ref refid="structspiffs__stat" kindref="compound">spiffs_stat</ref> *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>Gets file status by filehandle. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to stat </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the stat struct to populate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+You will typically only need the type and name fields of the stats structure. type is SPIFFS_TYPE_FILE or SPIFFS_TYPE_DIR name is the name (c-string) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="495" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="495" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a32b335384933ca63e6f8026759ced629" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::fflush</definition>
+        <argsstring>(spiffs_file fh)</argsstring>
+        <name>fflush</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <briefdescription>
+<para>Flushes all pending write operations from cache for given file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to flush</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+It is not necessary to flush before close; close will flush any data if necessary. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="503" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="503" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1af9962503f18487131191a5647e32ef2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::close</definition>
+        <argsstring>(spiffs_file fh)</argsstring>
+        <name>close</name>
+        <param>
+          <type>spiffs_file</type>
+          <declname>fh</declname>
+        </param>
+        <briefdescription>
+<para>Closes a filehandle. If there are pending write operations, these are finalized before closing. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fh</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the filehandle of the file to close </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="509" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="509" bodyend="509"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1ad016729fc6bc5560ddb5e5faba089b4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::rename</definition>
+        <argsstring>(const char *old, const char *newPath)</argsstring>
+        <name>rename</name>
+        <param>
+          <type>const char *</type>
+          <declname>old</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>newPath</declname>
+        </param>
+        <briefdescription>
+<para>Renames a file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>old</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>path of file to rename </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>new path of file </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="516" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="516" bodyend="516"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a638a65a354cc57c4a89fc19af1568cbb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::spiffs_errno</definition>
+        <argsstring>()</argsstring>
+        <name>spiffs_errno</name>
+        <briefdescription>
+<para>Returns last error of last file operation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="521" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="521" bodyend="521"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1af89255deb61819ea561163652784dcf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiffsParticle::spiffs_clearerr</definition>
+        <argsstring>()</argsstring>
+        <name>spiffs_clearerr</name>
+        <briefdescription>
+<para>Clears last error. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the file system struct </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="527" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="527" bodyend="527"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1ae2fdc1f28c8a83a55d9e2b18c734f631" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structspiffs___d_i_r" kindref="compound">spiffs_DIR</ref> *</type>
+        <definition>spiffs_DIR* SpiffsParticle::opendir</definition>
+        <argsstring>(const char *name, spiffs_DIR *d)</argsstring>
+        <name>opendir</name>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structspiffs___d_i_r" kindref="compound">spiffs_DIR</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Opens a directory stream corresponding to the given name. The stream is positioned at the first entry in the directory. On hydrogen builds the name argument is ignored as hydrogen builds always correspond to a flat file structure - no directories. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the name of the directory </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer the directory stream to be populated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="537" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="537" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a258d05b35100c4b20fdd090810392e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>struct <ref refid="structspiffs__dirent" kindref="compound">spiffs_dirent</ref> *</type>
+        <definition>struct spiffs_dirent* SpiffsParticle::readdir</definition>
+        <argsstring>(spiffs_DIR *d, struct spiffs_dirent *e)</argsstring>
+        <name>readdir</name>
+        <param>
+          <type><ref refid="structspiffs___d_i_r" kindref="compound">spiffs_DIR</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structspiffs__dirent" kindref="compound">spiffs_dirent</ref> *</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Reads a directory into given spifs_dirent struct. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the directory stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the dirent struct to be populated </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>null if error or end of stream, else given dirent is returned </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="545" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="545" bodyend="545"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a6b7038ef799d9c369fac7d52f94032d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::closedir</definition>
+        <argsstring>(spiffs_DIR *d)</argsstring>
+        <name>closedir</name>
+        <param>
+          <type><ref refid="structspiffs___d_i_r" kindref="compound">spiffs_DIR</ref> *</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Closes a directory stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the directory stream to close </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="551" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="551" bodyend="551"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a9ca5ff16a1168aef2d0b1aa1b1b9e1e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::check</definition>
+        <argsstring>()</argsstring>
+        <name>check</name>
+        <briefdescription>
+<para>Runs a consistency check on given filesystem. </para>        </briefdescription>
+        <detaileddescription>
+<para>This takes a while to run so you probably don&apos;t want to do this very often. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="558" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="558" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1afb2bb434707069b737e54fb342e9831b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::info</definition>
+        <argsstring>(u32_t *total, u32_t *used)</argsstring>
+        <name>info</name>
+        <param>
+          <type>u32_t *</type>
+          <declname>total</declname>
+        </param>
+        <param>
+          <type>u32_t *</type>
+          <declname>used</declname>
+        </param>
+        <briefdescription>
+<para>Returns number of total bytes available and number of used bytes. This is an estimation, and depends on if there a many files with little data or few files with much data. NB: If used number of bytes exceeds total bytes, a SPIFFS_check should run. This indicates a power loss in midst of things. In worst case (repeated powerlosses in mending or gc) you might have to delete some files. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>total</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>total number of bytes in filesystem </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>used</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>used number of bytes in filesystem </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="571" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="571" bodyend="571"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a7dca116e5b60e5a46a10a15bdd747ca2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SpiffsParticle::mounted</definition>
+        <argsstring>()</argsstring>
+        <name>mounted</name>
+        <briefdescription>
+<para>Returns nonzero if spiffs is mounted, or zero if unmounted. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="576" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="576" bodyend="576"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_spiffs_particle_1aae0af1b65302b4ef3cd3b95f9239bc12" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SpiffsParticle::infoLog</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>infoLog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Used internally to generate an info level log for app.spiffs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="582" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1ab74ae23691bfc91496484cc4cda489d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void SpiffsParticle::traceLog</definition>
+        <argsstring>(const char *fmt,...)</argsstring>
+        <name>traceLog</name>
+        <param>
+          <type>const char *</type>
+          <declname>fmt</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>Used internally to generate an trace level log for app.spiffs. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="587" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_spiffs_particle_1a6409abb77d20c524a1f0c29c9c902d88" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::readCallback</definition>
+        <argsstring>(u32_t addr, u32_t size, u8_t *dst)</argsstring>
+        <name>readCallback</name>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to read from flash. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="593" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="85" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1acef91d1ff2b9352a1d62e237dc652748" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::writeCallback</definition>
+        <argsstring>(u32_t addr, u32_t size, u8_t *src)</argsstring>
+        <name>writeCallback</name>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to write to flash. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="598" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="100" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a528919288ed2a404913d760d6e23f232" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::eraseCallback</definition>
+        <argsstring>(u32_t addr, u32_t size)</argsstring>
+        <name>eraseCallback</name>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to erase a flash sector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="603" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="115" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a6f62a3164f12e81f430e500b7eaee5da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiffsParticle::checkCallback</definition>
+        <argsstring>(spiffs_check_type type, spiffs_check_report report, u32_t arg1, u32_t arg2)</argsstring>
+        <name>checkCallback</name>
+        <param>
+          <type>spiffs_check_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>spiffs_check_report</type>
+          <declname>report</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to during filesystem check. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="608" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="131" bodyend="140"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_spiffs_particle_1a74ac1b9329c731fff5d63797b2470720" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::readCallbackStatic</definition>
+        <argsstring>(struct spiffs_t *fs, u32_t addr, u32_t size, u8_t *dst)</argsstring>
+        <name>readCallbackStatic</name>
+        <param>
+          <type>struct <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> *</type>
+          <declname>fs</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>dst</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to read from flash. </para>        </briefdescription>
+        <detaileddescription>
+<para>Passed to SPIFFS. Assumes this (pointer to <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> object instance) is in the user_data of the <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="616" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="145" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a5d38c8c5b70b702462de77126bac969f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::writeCallbackStatic</definition>
+        <argsstring>(struct spiffs_t *fs, u32_t addr, u32_t size, u8_t *src)</argsstring>
+        <name>writeCallbackStatic</name>
+        <param>
+          <type>struct <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> *</type>
+          <declname>fs</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>u8_t *</type>
+          <declname>src</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to write to flash. </para>        </briefdescription>
+        <detaileddescription>
+<para>Passed to SPIFFS. Assumes this (pointer to <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> object instance) is in the user_data of the <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="624" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a3de689237146ac51f2ebbd2036004b55" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s32_t</type>
+        <definition>s32_t SpiffsParticle::eraseCallbackStatic</definition>
+        <argsstring>(struct spiffs_t *fs, u32_t addr, u32_t size)</argsstring>
+        <name>eraseCallbackStatic</name>
+        <param>
+          <type>struct <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> *</type>
+          <declname>fs</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Use internally to erase a flash sector. </para>        </briefdescription>
+        <detaileddescription>
+<para>Passed to SPIFFS. Assumes this (pointer to <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> object instance) is in the user_data of the <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="632" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="class_spiffs_particle_1a599818d67d8959ac4b696516f7a58340" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SpiffsParticle::checkCallbackStatic</definition>
+        <argsstring>(struct spiffs_t *fs, spiffs_check_type type, spiffs_check_report report, u32_t arg1, u32_t arg2)</argsstring>
+        <name>checkCallbackStatic</name>
+        <param>
+          <type>struct <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> *</type>
+          <declname>fs</declname>
+        </param>
+        <param>
+          <type>spiffs_check_type</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>spiffs_check_report</type>
+          <declname>report</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>arg1</declname>
+        </param>
+        <param>
+          <type>u32_t</type>
+          <declname>arg2</declname>
+        </param>
+        <briefdescription>
+<para>used internally as the file system check callback </para>        </briefdescription>
+        <detaileddescription>
+<para>Passed to SPIFFS. Assumes this (pointer to <ref refid="class_spiffs_particle" kindref="compound">SpiffsParticle</ref> object instance) is in the user_data of the <ref refid="structspiffs__t" kindref="compound">spiffs_t</ref> object. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/SpiffsParticleRK.h" line="640" column="1" bodyfile="src/SpiffsParticleRK.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>C++ wrapper for the SPIFFS library for the Particle platform. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/SpiffsParticleRK.h" line="237" column="1" bodyfile="src/SpiffsParticleRK.h" bodystart="237" bodyend="654"/>
+    <listofallmembers>
+      <member refid="class_spiffs_particle_1abd0aebb68f741f3691bd52f49a4e78b5" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>cacheBuffer</name></member>
+      <member refid="class_spiffs_particle_1a83280e8bc458250df18ea19930326378" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>cacheBufferSize</name></member>
+      <member refid="class_spiffs_particle_1a8bac0387596356da7664dc0aeebd1bf7" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>cachePages</name></member>
+      <member refid="class_spiffs_particle_1a9ca5ff16a1168aef2d0b1aa1b1b9e1e0" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>check</name></member>
+      <member refid="class_spiffs_particle_1a6f62a3164f12e81f430e500b7eaee5da" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>checkCallback</name></member>
+      <member refid="class_spiffs_particle_1a599818d67d8959ac4b696516f7a58340" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>checkCallbackStatic</name></member>
+      <member refid="class_spiffs_particle_1af9962503f18487131191a5647e32ef2a" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>close</name></member>
+      <member refid="class_spiffs_particle_1a6b7038ef799d9c369fac7d52f94032d3" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>closedir</name></member>
+      <member refid="class_spiffs_particle_1a6bd569b2fd91eb30a71efab7ca7210f1" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>config</name></member>
+      <member refid="class_spiffs_particle_1ac2714880969a1b6625de152105e291f5" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>creat</name></member>
+      <member refid="class_spiffs_particle_1abb6a31d8bb30bbe0816e89f8d15cfd9c" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>eof</name></member>
+      <member refid="class_spiffs_particle_1a377b6476c59d353cedc0c666a3998af4" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>erase</name></member>
+      <member refid="class_spiffs_particle_1a528919288ed2a404913d760d6e23f232" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>eraseCallback</name></member>
+      <member refid="class_spiffs_particle_1a3de689237146ac51f2ebbd2036004b55" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>eraseCallbackStatic</name></member>
+      <member refid="class_spiffs_particle_1a910d12e50fdc3d709adb7e4ac8a2afe8" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>fdBuffer</name></member>
+      <member refid="class_spiffs_particle_1a2447f3903764055dcdb5aca2fedd4471" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>fdBufferSize</name></member>
+      <member refid="class_spiffs_particle_1a32b335384933ca63e6f8026759ced629" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>fflush</name></member>
+      <member refid="class_spiffs_particle_1a04dd9e0789c88de8eaffb9bcf5142d78" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>flash</name></member>
+      <member refid="class_spiffs_particle_1a31500330ba98a081bc7b41f027406bf0" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>format</name></member>
+      <member refid="class_spiffs_particle_1a19073c6608c352f93e4a5cff6bb95fb8" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>fremove</name></member>
+      <member refid="class_spiffs_particle_1a4323fc03ea543392e69e60a6c6cba333" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>fs</name></member>
+      <member refid="class_spiffs_particle_1a2ea24c9aded8801cafd373b11dd912d7" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>fstat</name></member>
+      <member refid="class_spiffs_particle_1a9bcb248af1aa3fe66b6a853304765e35" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>ftruncate</name></member>
+      <member refid="class_spiffs_particle_1afb2bb434707069b737e54fb342e9831b" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>info</name></member>
+      <member refid="class_spiffs_particle_1aae0af1b65302b4ef3cd3b95f9239bc12" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>infoLog</name></member>
+      <member refid="class_spiffs_particle_1a54a7316d2cf29b8213e7458c6cf153f9" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>lowLevelDebug</name></member>
+      <member refid="class_spiffs_particle_1a8875ae5bd2177da2b046ac5b6254ec85" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>lseek</name></member>
+      <member refid="class_spiffs_particle_1adbe865bbeedc27b3002bef11bd4a2cc4" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>maxOpenFiles</name></member>
+      <member refid="class_spiffs_particle_1a55ce37570d764bb8d00698903211fee8" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>mount</name></member>
+      <member refid="class_spiffs_particle_1a7dca116e5b60e5a46a10a15bdd747ca2" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>mounted</name></member>
+      <member refid="class_spiffs_particle_1a0f13439808a65feb0d307de157598b96" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>open</name></member>
+      <member refid="class_spiffs_particle_1ae2fdc1f28c8a83a55d9e2b18c734f631" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>opendir</name></member>
+      <member refid="class_spiffs_particle_1a19e88cd7e5e352ab0222ac8d5ece430b" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>openFile</name></member>
+      <member refid="class_spiffs_particle_1a39cfb5a9c5bc2ae9f99a3c5c3bf4e64f" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>read</name></member>
+      <member refid="class_spiffs_particle_1a6409abb77d20c524a1f0c29c9c902d88" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>readCallback</name></member>
+      <member refid="class_spiffs_particle_1a74ac1b9329c731fff5d63797b2470720" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>readCallbackStatic</name></member>
+      <member refid="class_spiffs_particle_1a258d05b35100c4b20fdd090810392e56" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>readdir</name></member>
+      <member refid="class_spiffs_particle_1a9ee304e19b76f4a68e8f772a92bbd104" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>remove</name></member>
+      <member refid="class_spiffs_particle_1ad016729fc6bc5560ddb5e5faba089b4f" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>rename</name></member>
+      <member refid="class_spiffs_particle_1af89255deb61819ea561163652784dcf1" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>spiffs_clearerr</name></member>
+      <member refid="class_spiffs_particle_1a638a65a354cc57c4a89fc19af1568cbb" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>spiffs_errno</name></member>
+      <member refid="class_spiffs_particle_1a3c3749f4cfae7c6ef1721b84e0964a56" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>SpiffsParticle</name></member>
+      <member refid="class_spiffs_particle_1a42bc28baf22af229ca371a0a1e2d16a6" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>stat</name></member>
+      <member refid="class_spiffs_particle_1a38ddf851ffd2e4ade100114bfe4ca524" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>tell</name></member>
+      <member refid="class_spiffs_particle_1ab74ae23691bfc91496484cc4cda489d9" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>traceLog</name></member>
+      <member refid="class_spiffs_particle_1af52be85536c06520864bd4918b3fe927" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>truncate</name></member>
+      <member refid="class_spiffs_particle_1a2f1b8abb2c89f1935675240430907f7e" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>unmount</name></member>
+      <member refid="class_spiffs_particle_1a4c8cfa33e7ae5c6bdc42316f80ec8167" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>userCheckCallback</name></member>
+      <member refid="class_spiffs_particle_1afc11a0266e8be6fb84ec4735d58281cb" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withCachePages</name></member>
+      <member refid="class_spiffs_particle_1a9f04b3f3f10aacad3281a8abaf14bac6" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withLogicalBlockSize</name></member>
+      <member refid="class_spiffs_particle_1afb7595fab7db056f0c4594ee5fa2cd48" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withLogicalPageSize</name></member>
+      <member refid="class_spiffs_particle_1a12f034a87b98381d976f81885b66b87a" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withLowLevelDebug</name></member>
+      <member refid="class_spiffs_particle_1a0a88791b69d2711a32b31cef465f2ebe" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withMaxOpenFiles</name></member>
+      <member refid="class_spiffs_particle_1a68685e7a6143d550c1f31f0046187426" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withPhysicalAddr</name></member>
+      <member refid="class_spiffs_particle_1af99c2e3bdc38de7f33761b97a2680cec" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withPhysicalBlockSize</name></member>
+      <member refid="class_spiffs_particle_1a6d58b2716f9ae5b1f5508f4e82e8b6c0" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>withPhysicalSize</name></member>
+      <member refid="class_spiffs_particle_1ac669600c6a10fe3d5d45a87a1c75f638" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>workBuffer</name></member>
+      <member refid="class_spiffs_particle_1a24c19c610c1bc97647d8797ed632a814" prot="public" virt="non-virtual"><scope>SpiffsParticle</scope><name>write</name></member>
+      <member refid="class_spiffs_particle_1acef91d1ff2b9352a1d62e237dc652748" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>writeCallback</name></member>
+      <member refid="class_spiffs_particle_1a5d38c8c5b70b702462de77126bac969f" prot="private" virt="non-virtual"><scope>SpiffsParticle</scope><name>writeCallbackStatic</name></member>
+      <member refid="class_spiffs_particle_1a78ce9c8fdcc988cb4838572cb22d9922" prot="public" virt="virtual"><scope>SpiffsParticle</scope><name>~SpiffsParticle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

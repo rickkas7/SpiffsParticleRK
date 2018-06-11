@@ -1,0 +1,371 @@
+\hypertarget{class_print}{}\section{Print Class Reference}
+\label{class_print}\index{Print@{Print}}
+
+
+Class for printing to a stream or file.  
+
+
+
+
+{\ttfamily \#include $<$spark\+\_\+wiring\+\_\+print.\+h$>$}
+
+Inheritance diagram for Print\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_print}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_print_a88a4a829fb5d589efb43955ad0cbddcc}\label{class_print_a88a4a829fb5d589efb43955ad0cbddcc}} 
+int \mbox{\hyperlink{class_print_a88a4a829fb5d589efb43955ad0cbddcc}{get\+Write\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Return the last error code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_aec9ecf84cc6d9087a650def3cefc459e}\label{class_print_aec9ecf84cc6d9087a650def3cefc459e}} 
+void \mbox{\hyperlink{class_print_aec9ecf84cc6d9087a650def3cefc459e}{clear\+Write\+Error}} ()
+\begin{DoxyCompactList}\small\item\em Clear the last error code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a5be30d49adae2406a270c29ba9a3e0a3}\label{class_print_a5be30d49adae2406a270c29ba9a3e0a3}} 
+virtual size\+\_\+t \mbox{\hyperlink{class_print_a5be30d49adae2406a270c29ba9a3e0a3}{write}} (uint8\+\_\+t)=0
+\begin{DoxyCompactList}\small\item\em Write a single byte to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a5b40e0e9cab1f2fe5bb0cb22ffe5adda}{write}} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Write a null-\/terminated c-\/string the stream or file. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \mbox{\hyperlink{class_print_a88864e109589a5be9b0f5ba1327f8421}{write}} (const uint8\+\_\+t $\ast$buffer, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Write a bytes specified by a buffer and length to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_acfe80773011eb17dfb52c2fba517a093}\label{class_print_acfe80773011eb17dfb52c2fba517a093}} 
+size\+\_\+t \mbox{\hyperlink{class_print_acfe80773011eb17dfb52c2fba517a093}{print}} (const char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a null-\/terminated array of char variables (a c-\/string) to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a1e411d07a8ffec5faf7ce485bac0f029}\label{class_print_a1e411d07a8ffec5faf7ce485bac0f029}} 
+size\+\_\+t \mbox{\hyperlink{class_print_a1e411d07a8ffec5faf7ce485bac0f029}{print}} (char)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a single character to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_ae35481e77567618140cd58d8b96d3747}{print}} (unsigned char value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an unsigned char (byte value) in the specified base to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_aa28ddbde83b14df73b41c919ecc4478f}{print}} (int value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an int the specified base to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_afcd7d3a184df961a502643e4fb638c52}{print}} (unsigned int value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an unsigned int the specified base to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a0c663ac015ebc037ea044ba2e2cf2947}{print}} (long value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a long the specified base to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_acb8c6dcd4339b024436002aa9a6f4be2}{print}} (unsigned long value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a unsigned long the specified base to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_ad89472bdb6539423a42d350beec02ff4}{print}} (double value, int dec=2)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a double floating point value to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a901b0f06ae34aab31b8fbb4298f0596e}\label{class_print_a901b0f06ae34aab31b8fbb4298f0596e}} 
+size\+\_\+t \mbox{\hyperlink{class_print_a901b0f06ae34aab31b8fbb4298f0596e}{print}} (const Printable \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an object derived from Printable to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_ad337ce3f7977411b7d34d47a51e5737e}\label{class_print_ad337ce3f7977411b7d34d47a51e5737e}} 
+size\+\_\+t \mbox{\hyperlink{class_print_ad337ce3f7977411b7d34d47a51e5737e}{println}} (const char\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a null-\/terminated array of char variables (a c-\/string) plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a80fdd92db4b396062586bcb3e08d3835}\label{class_print_a80fdd92db4b396062586bcb3e08d3835}} 
+size\+\_\+t \mbox{\hyperlink{class_print_a80fdd92db4b396062586bcb3e08d3835}{println}} (char value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a single character plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a000b3fd5b723cb6c7db0d3231a9ef2f8}{println}} (unsigned char value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an unsigned char (byte value) in the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a82aa91bbd859f28a0a3b4869e5bfcadd}{println}} (int value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an int the specified base to plus a C\+R\+LF end-\/of-\/line terminator the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a2608232c1f10f654111ff447de16d60b}{println}} (unsigned int value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an unsigned int the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a82bbe59b28440c29e55ff3597eb45376}{println}} (long value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a long the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_afa936d7e8dd329d9162f2cd28f42681e}{println}} (unsigned long value, int base=D\+EC)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a unsigned long the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_print_a178b90baf9f74f0945f5c64aafec59ea}{println}} (double value, int dec=2)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a double floating point value plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a20f9e104153b62e720c9b4c348b44f00}\label{class_print_a20f9e104153b62e720c9b4c348b44f00}} 
+size\+\_\+t \mbox{\hyperlink{class_print_a20f9e104153b62e720c9b4c348b44f00}{println}} (const Printable \&)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} an object derived from Printable plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_print_a169b128f9e22f0c15883768f580541a2}\label{class_print_a169b128f9e22f0c15883768f580541a2}} 
+size\+\_\+t \mbox{\hyperlink{class_print_a169b128f9e22f0c15883768f580541a2}{println}} (void)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\size\+\_\+t \mbox{\hyperlink{class_print_a08a461c9fee5fd8f5795d6e9f61e3d5b}{printf}} (const char $\ast$format, Args... args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} using printf-\/style formatting to the stream or file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\size\+\_\+t \mbox{\hyperlink{class_print_afa41aa5211c54b7b4d79b9286880c337}{printlnf}} (const char $\ast$format, Args... args)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_print}{Print}} using printf-\/style formatting plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class for printing to a stream or file. 
+
+Various classes include serial, T\+CP network streams, and files inherit from this and can use these methods. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_print_ae35481e77567618140cd58d8b96d3747}\label{class_print_ae35481e77567618140cd58d8b96d3747}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{unsigned char}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an unsigned char (byte value) in the specified base to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_aa28ddbde83b14df73b41c919ecc4478f}\label{class_print_aa28ddbde83b14df73b41c919ecc4478f}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an int the specified base to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_afcd7d3a184df961a502643e4fb638c52}\label{class_print_afcd7d3a184df961a502643e4fb638c52}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{unsigned int}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an unsigned int the specified base to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a0c663ac015ebc037ea044ba2e2cf2947}\label{class_print_a0c663ac015ebc037ea044ba2e2cf2947}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{long}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a long the specified base to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_acb8c6dcd4339b024436002aa9a6f4be2}\label{class_print_acb8c6dcd4339b024436002aa9a6f4be2}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{unsigned long}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a unsigned long the specified base to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_ad89472bdb6539423a42d350beec02ff4}\label{class_print_ad89472bdb6539423a42d350beec02ff4}} 
+\index{Print@{Print}!print@{print}}
+\index{print@{print}!Print@{Print}}
+\subsubsection{\texorpdfstring{print()}{print()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::print (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{int}]{dec = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a double floating point value to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em dec} & The number of decimal places to include for the fractional part. Default\+: 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a08a461c9fee5fd8f5795d6e9f61e3d5b}\label{class_print_a08a461c9fee5fd8f5795d6e9f61e3d5b}} 
+\index{Print@{Print}!printf@{printf}}
+\index{printf@{printf}!Print@{Print}}
+\subsubsection{\texorpdfstring{printf()}{printf()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+size\+\_\+t Print\+::printf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} using printf-\/style formatting to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & printf-\/style formatting string\\
+\hline
+{\em args} & variable arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a000b3fd5b723cb6c7db0d3231a9ef2f8}\label{class_print_a000b3fd5b723cb6c7db0d3231a9ef2f8}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{unsigned char}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an unsigned char (byte value) in the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a82aa91bbd859f28a0a3b4869e5bfcadd}\label{class_print_a82aa91bbd859f28a0a3b4869e5bfcadd}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{int}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an int the specified base to plus a C\+R\+LF end-\/of-\/line terminator the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a2608232c1f10f654111ff447de16d60b}\label{class_print_a2608232c1f10f654111ff447de16d60b}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{unsigned int}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} an unsigned int the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a82bbe59b28440c29e55ff3597eb45376}\label{class_print_a82bbe59b28440c29e55ff3597eb45376}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{long}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a long the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_afa936d7e8dd329d9162f2cd28f42681e}\label{class_print_afa936d7e8dd329d9162f2cd28f42681e}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{unsigned long}]{value,  }\item[{int}]{base = {\ttfamily DEC} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a unsigned long the specified base plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em base} & The base to print. Default is D\+EC (decimal). Other values are H\+EX (hexadecimal), O\+CT (octal), and B\+IN (binary). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a178b90baf9f74f0945f5c64aafec59ea}\label{class_print_a178b90baf9f74f0945f5c64aafec59ea}} 
+\index{Print@{Print}!println@{println}}
+\index{println@{println}!Print@{Print}}
+\subsubsection{\texorpdfstring{println()}{println()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::println (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{int}]{dec = {\ttfamily 2} }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} a double floating point value plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value to print \\
+\hline
+{\em dec} & The number of decimal places to include for the fractional part. Default\+: 2 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_afa41aa5211c54b7b4d79b9286880c337}\label{class_print_afa41aa5211c54b7b4d79b9286880c337}} 
+\index{Print@{Print}!printlnf@{printlnf}}
+\index{printlnf@{printlnf}!Print@{Print}}
+\subsubsection{\texorpdfstring{printlnf()}{printlnf()}}
+{\footnotesize\ttfamily template$<$typename... Args$>$ \\
+size\+\_\+t Print\+::printlnf (\begin{DoxyParamCaption}\item[{const char $\ast$}]{format,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\mbox{\hyperlink{class_print}{Print}} using printf-\/style formatting plus a C\+R\+LF end-\/of-\/line terminator to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em format} & printf-\/style formatting string\\
+\hline
+{\em args} & variable arguments \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a5b40e0e9cab1f2fe5bb0cb22ffe5adda}\label{class_print_a5b40e0e9cab1f2fe5bb0cb22ffe5adda}} 
+\index{Print@{Print}!write@{write}}
+\index{write@{write}!Print@{Print}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily size\+\_\+t Print\+::write (\begin{DoxyParamCaption}\item[{const char $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Write a null-\/terminated c-\/string the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & point to a null-\/terminated c-\/string \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_print_a88864e109589a5be9b0f5ba1327f8421}\label{class_print_a88864e109589a5be9b0f5ba1327f8421}} 
+\index{Print@{Print}!write@{write}}
+\index{write@{write}!Print@{Print}}
+\subsubsection{\texorpdfstring{write()}{write()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual size\+\_\+t Print\+::write (\begin{DoxyParamCaption}\item[{const uint8\+\_\+t $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Write a bytes specified by a buffer and length to the stream or file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & pointer to the buffer \\
+\hline
+{\em size} & size in bytes \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_spiffs_particle_file_ada3fa1782a929e32adab1c161f9d5eeb}{Spiffs\+Particle\+File}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+docs/src/\mbox{\hyperlink{spark__wiring__print_8h}{spark\+\_\+wiring\+\_\+print.\+h}}\end{DoxyCompactItemize}

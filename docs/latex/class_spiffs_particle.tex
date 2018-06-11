@@ -1,0 +1,642 @@
+\hypertarget{class_spiffs_particle}{}\section{Spiffs\+Particle Class Reference}
+\label{class_spiffs_particle}\index{Spiffs\+Particle@{Spiffs\+Particle}}
+
+
+C++ wrapper for the S\+P\+I\+F\+FS library for the Particle platform.  
+
+
+
+
+{\ttfamily \#include $<$Spiffs\+Particle\+R\+K.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_spiffs_particle_a3c3749f4cfae7c6ef1721b84e0964a56}{Spiffs\+Particle}} (Spi\+Flash\+Base \&flash)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} file system object. Note that you must mount the file system before using it! \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spiffs_particle_a6d58b2716f9ae5b1f5508f4e82e8b6c0}\label{class_spiffs_particle_a6d58b2716f9ae5b1f5508f4e82e8b6c0}} 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_a6d58b2716f9ae5b1f5508f4e82e8b6c0}{with\+Physical\+Size}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the size of the flash file system in bytes, relative to the physical start address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spiffs_particle_a68685e7a6143d550c1f31f0046187426}\label{class_spiffs_particle_a68685e7a6143d550c1f31f0046187426}} 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_a68685e7a6143d550c1f31f0046187426}{with\+Physical\+Addr}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the start address in the flash for the file system (default\+: 0) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_af99c2e3bdc38de7f33761b97a2680cec}{with\+Physical\+Block\+Size}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the physical block size (default\+: 4096) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_a9f04b3f3f10aacad3281a8abaf14bac6}{with\+Logical\+Block\+Size}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the logical block size (default\+: 4096) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_afb7595fab7db056f0c4594ee5fa2cd48}{with\+Logical\+Page\+Size}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the logical page size (default\+: 256) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_a0a88791b69d2711a32b31cef465f2ebe}{with\+Max\+Open\+Files}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the maximum number of open files (default\+: 4) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_afc11a0266e8be6fb84ec4735d58281cb}{with\+Cache\+Pages}} (size\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Sets the desired not of cache pages (default\+: 2) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} \& \mbox{\hyperlink{class_spiffs_particle_a12f034a87b98381d976f81885b66b87a}{with\+Low\+Level\+Debug}} (bool value=true)
+\begin{DoxyCompactList}\small\item\em Enable (or disable) low level debug mode. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a55ce37570d764bb8d00698903211fee8}{mount}} (spiffs\+\_\+check\+\_\+callback callback)
+\begin{DoxyCompactList}\small\item\em Mount the file system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spiffs_particle_a2f1b8abb2c89f1935675240430907f7e}{unmount}} ()
+\begin{DoxyCompactList}\small\item\em Unmount the file system. All file handles will be flushed of any cached writes and closed. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a31500330ba98a081bc7b41f027406bf0}{format}} ()
+\begin{DoxyCompactList}\small\item\em Format the file system. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a377b6476c59d353cedc0c666a3998af4}{erase}} ()
+\begin{DoxyCompactList}\small\item\em Erase the sectors used by the file system. Obviously all data will be lost. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_ac2714880969a1b6625de152105e291f5}{creat}} (const char $\ast$path, spiffs\+\_\+mode mode=0777)
+\begin{DoxyCompactList}\small\item\em Creates a new file. \end{DoxyCompactList}\item 
+spiffs\+\_\+file \mbox{\hyperlink{class_spiffs_particle_a0f13439808a65feb0d307de157598b96}{open}} (const char $\ast$path, spiffs\+\_\+flags flags, spiffs\+\_\+mode mode=0777)
+\begin{DoxyCompactList}\small\item\em Opens or creates a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_spiffs_particle_file}{Spiffs\+Particle\+File}} \mbox{\hyperlink{class_spiffs_particle_a19e88cd7e5e352ab0222ac8d5ece430b}{open\+File}} (const char $\ast$path, spiffs\+\_\+flags flags, spiffs\+\_\+mode mode=0777)
+\begin{DoxyCompactList}\small\item\em Open a file and return a \mbox{\hyperlink{class_spiffs_particle_file}{Spiffs\+Particle\+File}} object to easily manipulate it using Arduino/\+Wiring style calls. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a39cfb5a9c5bc2ae9f99a3c5c3bf4e64f}{read}} (spiffs\+\_\+file fh, void $\ast$buf, s32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Reads from given filehandle. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a24c19c610c1bc97647d8797ed632a814}{write}} (spiffs\+\_\+file fh, const void $\ast$buf, s32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Writes to given filehandle. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a8875ae5bd2177da2b046ac5b6254ec85}{lseek}} (spiffs\+\_\+file fh, s32\+\_\+t offs, int whence)
+\begin{DoxyCompactList}\small\item\em Moves the read/write file offset. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_abb6a31d8bb30bbe0816e89f8d15cfd9c}{eof}} (spiffs\+\_\+file fh)
+\begin{DoxyCompactList}\small\item\em Check if E\+OF reached. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a38ddf851ffd2e4ade100114bfe4ca524}{tell}} (spiffs\+\_\+file fh)
+\begin{DoxyCompactList}\small\item\em Get position in file. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a9ee304e19b76f4a68e8f772a92bbd104}{remove}} (const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Removes a file by path. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a19073c6608c352f93e4a5cff6bb95fb8}{fremove}} (spiffs\+\_\+file fh)
+\begin{DoxyCompactList}\small\item\em Removes a file by filehandle. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_af52be85536c06520864bd4918b3fe927}{truncate}} (const char $\ast$path, s32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Truncate a file by path. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a9bcb248af1aa3fe66b6a853304765e35}{ftruncate}} (spiffs\+\_\+file fh, s32\+\_\+t len)
+\begin{DoxyCompactList}\small\item\em Truncate a file by filehandle. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a42bc28baf22af229ca371a0a1e2d16a6}{stat}} (const char $\ast$path, \mbox{\hyperlink{structspiffs__stat}{spiffs\+\_\+stat}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Gets file status by path. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a2ea24c9aded8801cafd373b11dd912d7}{fstat}} (spiffs\+\_\+file fh, \mbox{\hyperlink{structspiffs__stat}{spiffs\+\_\+stat}} $\ast$s)
+\begin{DoxyCompactList}\small\item\em Gets file status by filehandle. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a32b335384933ca63e6f8026759ced629}{fflush}} (spiffs\+\_\+file fh)
+\begin{DoxyCompactList}\small\item\em Flushes all pending write operations from cache for given file. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_af9962503f18487131191a5647e32ef2a}{close}} (spiffs\+\_\+file fh)
+\begin{DoxyCompactList}\small\item\em Closes a filehandle. If there are pending write operations, these are finalized before closing. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_ad016729fc6bc5560ddb5e5faba089b4f}{rename}} (const char $\ast$old, const char $\ast$new\+Path)
+\begin{DoxyCompactList}\small\item\em Renames a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spiffs_particle_a638a65a354cc57c4a89fc19af1568cbb}\label{class_spiffs_particle_a638a65a354cc57c4a89fc19af1568cbb}} 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a638a65a354cc57c4a89fc19af1568cbb}{spiffs\+\_\+errno}} ()
+\begin{DoxyCompactList}\small\item\em Returns last error of last file operation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_spiffs_particle_af89255deb61819ea561163652784dcf1}{spiffs\+\_\+clearerr}} ()
+\begin{DoxyCompactList}\small\item\em Clears last error. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$ \mbox{\hyperlink{class_spiffs_particle_ae2fdc1f28c8a83a55d9e2b18c734f631}{opendir}} (const char $\ast$name, \mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Opens a directory stream corresponding to the given name. The stream is positioned at the first entry in the directory. On hydrogen builds the name argument is ignored as hydrogen builds always correspond to a flat file structure -\/ no directories. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structspiffs__dirent}{spiffs\+\_\+dirent}} $\ast$ \mbox{\hyperlink{class_spiffs_particle_a258d05b35100c4b20fdd090810392e56}{readdir}} (\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$d, struct \mbox{\hyperlink{structspiffs__dirent}{spiffs\+\_\+dirent}} $\ast$e)
+\begin{DoxyCompactList}\small\item\em Reads a directory into given spifs\+\_\+dirent struct. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a6b7038ef799d9c369fac7d52f94032d3}{closedir}} (\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$d)
+\begin{DoxyCompactList}\small\item\em Closes a directory stream. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_a9ca5ff16a1168aef2d0b1aa1b1b9e1e0}{check}} ()
+\begin{DoxyCompactList}\small\item\em Runs a consistency check on given filesystem. \end{DoxyCompactList}\item 
+s32\+\_\+t \mbox{\hyperlink{class_spiffs_particle_afb2bb434707069b737e54fb342e9831b}{info}} (u32\+\_\+t $\ast$total, u32\+\_\+t $\ast$used)
+\begin{DoxyCompactList}\small\item\em Returns number of total bytes available and number of used bytes. This is an estimation, and depends on if there a many files with little data or few files with much data. NB\+: If used number of bytes exceeds total bytes, a S\+P\+I\+F\+F\+S\+\_\+check should run. This indicates a power loss in midst of things. In worst case (repeated powerlosses in mending or gc) you might have to delete some files. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spiffs_particle_a7dca116e5b60e5a46a10a15bdd747ca2}\label{class_spiffs_particle_a7dca116e5b60e5a46a10a15bdd747ca2}} 
+bool \mbox{\hyperlink{class_spiffs_particle_a7dca116e5b60e5a46a10a15bdd747ca2}{mounted}} ()
+\begin{DoxyCompactList}\small\item\em Returns nonzero if spiffs is mounted, or zero if unmounted. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_spiffs_particle_aae0af1b65302b4ef3cd3b95f9239bc12}\label{class_spiffs_particle_aae0af1b65302b4ef3cd3b95f9239bc12}} 
+static void \mbox{\hyperlink{class_spiffs_particle_aae0af1b65302b4ef3cd3b95f9239bc12}{info\+Log}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Used internally to generate an info level log for app.\+spiffs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_spiffs_particle_ab74ae23691bfc91496484cc4cda489d9}\label{class_spiffs_particle_ab74ae23691bfc91496484cc4cda489d9}} 
+static void \mbox{\hyperlink{class_spiffs_particle_ab74ae23691bfc91496484cc4cda489d9}{trace\+Log}} (const char $\ast$fmt,...)
+\begin{DoxyCompactList}\small\item\em Used internally to generate an trace level log for app.\+spiffs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+C++ wrapper for the S\+P\+I\+F\+FS library for the Particle platform. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_spiffs_particle_a3c3749f4cfae7c6ef1721b84e0964a56}\label{class_spiffs_particle_a3c3749f4cfae7c6ef1721b84e0964a56}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!Spiffs\+Particle@{Spiffs\+Particle}}
+\index{Spiffs\+Particle@{Spiffs\+Particle}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{Spiffs\+Particle()}{SpiffsParticle()}}
+{\footnotesize\ttfamily Spiffs\+Particle\+::\+Spiffs\+Particle (\begin{DoxyParamCaption}\item[{Spi\+Flash\+Base \&}]{flash }\end{DoxyParamCaption})}
+
+
+
+Create a \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} file system object. Note that you must mount the file system before using it! 
+
+It\textquotesingle{}s safe (and common) to create the \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} object as a global variable. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_spiffs_particle_a9ca5ff16a1168aef2d0b1aa1b1b9e1e0}\label{class_spiffs_particle_a9ca5ff16a1168aef2d0b1aa1b1b9e1e0}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!check@{check}}
+\index{check@{check}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Runs a consistency check on given filesystem. 
+
+This takes a while to run so you probably don\textquotesingle{}t want to do this very often. \mbox{\Hypertarget{class_spiffs_particle_af9962503f18487131191a5647e32ef2a}\label{class_spiffs_particle_af9962503f18487131191a5647e32ef2a}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!close@{close}}
+\index{close@{close}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::close (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes a filehandle. If there are pending write operations, these are finalized before closing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to close \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a6b7038ef799d9c369fac7d52f94032d3}\label{class_spiffs_particle_a6b7038ef799d9c369fac7d52f94032d3}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!closedir@{closedir}}
+\index{closedir@{closedir}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{closedir()}{closedir()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::closedir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Closes a directory stream. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & the directory stream to close \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_ac2714880969a1b6625de152105e291f5}\label{class_spiffs_particle_ac2714880969a1b6625de152105e291f5}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!creat@{creat}}
+\index{creat@{creat}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{creat()}{creat()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::creat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{spiffs\+\_\+mode}]{mode = {\ttfamily 0777} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the new file \\
+\hline
+{\em mode} & ignored, for posix compliance. This is an optional parameter.\\
+\hline
+\end{DoxyParams}
+Note that there are no subdirectories in S\+P\+I\+F\+FS and the maximum filename length is 32. \mbox{\Hypertarget{class_spiffs_particle_abb6a31d8bb30bbe0816e89f8d15cfd9c}\label{class_spiffs_particle_abb6a31d8bb30bbe0816e89f8d15cfd9c}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!eof@{eof}}
+\index{eof@{eof}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{eof()}{eof()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::eof (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if E\+OF reached. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a377b6476c59d353cedc0c666a3998af4}\label{class_spiffs_particle_a377b6476c59d353cedc0c666a3998af4}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!erase@{erase}}
+\index{erase@{erase}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::erase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Erase the sectors used by the file system. Obviously all data will be lost. 
+
+This function returns error S\+P\+I\+F\+F\+S\+\_\+\+E\+R\+R\+\_\+\+M\+O\+U\+N\+T\+ED if the file system is currently mounted; you must unmount it before erasing. \mbox{\Hypertarget{class_spiffs_particle_a32b335384933ca63e6f8026759ced629}\label{class_spiffs_particle_a32b335384933ca63e6f8026759ced629}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!fflush@{fflush}}
+\index{fflush@{fflush}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{fflush()}{fflush()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::fflush (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Flushes all pending write operations from cache for given file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to flush\\
+\hline
+\end{DoxyParams}
+It is not necessary to flush before close; close will flush any data if necessary. \mbox{\Hypertarget{class_spiffs_particle_a31500330ba98a081bc7b41f027406bf0}\label{class_spiffs_particle_a31500330ba98a081bc7b41f027406bf0}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!format@{format}}
+\index{format@{format}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Format the file system. 
+
+You typically do this when mount returns S\+P\+I\+F\+F\+S\+\_\+\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+A\+\_\+\+FS. Note that you cannot format a valid file system, you\textquotesingle{}ll need to erase the sectors first. Also, you must try mounting again after format. \mbox{\Hypertarget{class_spiffs_particle_a19073c6608c352f93e4a5cff6bb95fb8}\label{class_spiffs_particle_a19073c6608c352f93e4a5cff6bb95fb8}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!fremove@{fremove}}
+\index{fremove@{fremove}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{fremove()}{fremove()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::fremove (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a file by filehandle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a2ea24c9aded8801cafd373b11dd912d7}\label{class_spiffs_particle_a2ea24c9aded8801cafd373b11dd912d7}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!fstat@{fstat}}
+\index{fstat@{fstat}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{fstat()}{fstat()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::fstat (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh,  }\item[{\mbox{\hyperlink{structspiffs__stat}{spiffs\+\_\+stat}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets file status by filehandle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to stat \\
+\hline
+{\em s} & the stat struct to populate\\
+\hline
+\end{DoxyParams}
+You will typically only need the type and name fields of the stats structure. type is S\+P\+I\+F\+F\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+I\+LE or S\+P\+I\+F\+F\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+IR name is the name (c-\/string) \mbox{\Hypertarget{class_spiffs_particle_a9bcb248af1aa3fe66b6a853304765e35}\label{class_spiffs_particle_a9bcb248af1aa3fe66b6a853304765e35}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!ftruncate@{ftruncate}}
+\index{ftruncate@{ftruncate}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{ftruncate()}{ftruncate()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::ftruncate (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh,  }\item[{s32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Truncate a file by filehandle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to remove \\
+\hline
+{\em len} & the length to truncate to\\
+\hline
+\end{DoxyParams}
+Note\+: In P\+O\+S\+IX, len can be larger than the file size to make the file larger, but this does not work in S\+P\+I\+F\+FS. len must be less than or equal to the file size. See\+: \href{https://github.com/pellepl/spiffs/issues/107}{\tt https\+://github.\+com/pellepl/spiffs/issues/107} \mbox{\Hypertarget{class_spiffs_particle_afb2bb434707069b737e54fb342e9831b}\label{class_spiffs_particle_afb2bb434707069b737e54fb342e9831b}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!info@{info}}
+\index{info@{info}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::info (\begin{DoxyParamCaption}\item[{u32\+\_\+t $\ast$}]{total,  }\item[{u32\+\_\+t $\ast$}]{used }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns number of total bytes available and number of used bytes. This is an estimation, and depends on if there a many files with little data or few files with much data. NB\+: If used number of bytes exceeds total bytes, a S\+P\+I\+F\+F\+S\+\_\+check should run. This indicates a power loss in midst of things. In worst case (repeated powerlosses in mending or gc) you might have to delete some files. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total} & total number of bytes in filesystem \\
+\hline
+{\em used} & used number of bytes in filesystem \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a8875ae5bd2177da2b046ac5b6254ec85}\label{class_spiffs_particle_a8875ae5bd2177da2b046ac5b6254ec85}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!lseek@{lseek}}
+\index{lseek@{lseek}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{lseek()}{lseek()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::lseek (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh,  }\item[{s32\+\_\+t}]{offs,  }\item[{int}]{whence }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Moves the read/write file offset. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle \\
+\hline
+{\em offs} & how much/where to move the offset. Can be negative. \\
+\hline
+{\em whence} & if S\+P\+I\+F\+F\+S\+\_\+\+S\+E\+E\+K\+\_\+\+S\+ET, the file offset shall be set to offset bytes if S\+P\+I\+F\+F\+S\+\_\+\+S\+E\+E\+K\+\_\+\+C\+UR, the file offset shall be set to its current location plus offset if S\+P\+I\+F\+F\+S\+\_\+\+S\+E\+E\+K\+\_\+\+E\+ND, the file offset shall be set to the size of the file plus offset, which should be negative\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resulting offset is returned or negative if error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spiffs_particle_a55ce37570d764bb8d00698903211fee8}\label{class_spiffs_particle_a55ce37570d764bb8d00698903211fee8}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!mount@{mount}}
+\index{mount@{mount}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{mount()}{mount()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::mount (\begin{DoxyParamCaption}\item[{spiffs\+\_\+check\+\_\+callback}]{callback }\end{DoxyParamCaption})}
+
+
+
+Mount the file system. 
+
+\begin{DoxyReturn}{Returns}
+S\+P\+I\+F\+F\+S\+\_\+\+OK (0) on success or a negative error code. The most common error is S\+P\+I\+F\+F\+S\+\_\+\+E\+R\+R\+\_\+\+N\+O\+T\+\_\+\+A\+\_\+\+FS (-\/10025) which means you need to format the file system.
+\end{DoxyReturn}
+Note that you must always try to mount the file system before performing any other operations, including format. It allocates buffers for the work buffer, file handles, and cache buffer, so you should do it early in setup if possible to make sure there is memory available.
+
+In addition to the standard S\+P\+I\+F\+F\+S\+\_\+\+E\+RR errors, the \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}} port can also return S\+P\+I\+F\+F\+S\+\_\+\+E\+R\+R\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+M\+E\+M\+O\+RY if the buffers cannot be allocated during mount.
+
+The memory allocated to buffers when mounting is\+:
+
+
+\begin{DoxyItemize}
+\item Work buffers (2 $\ast$ logical page size), default is 2 $\ast$ 256 = 512
+\item File descriptor buffers (32 $\ast$ max open files), default is 32 $\ast$ 4 = 128
+\item Cache (logical page size + 32) $\ast$ cache\+Pages + 40 byte, default is (256 + 32) $\ast$ 2 + 40 = 616
+\end{DoxyItemize}
+
+Thus the total R\+AM allocated during mount is by default is 1256 bytes. \mbox{\Hypertarget{class_spiffs_particle_a0f13439808a65feb0d307de157598b96}\label{class_spiffs_particle_a0f13439808a65feb0d307de157598b96}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!open@{open}}
+\index{open@{open}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily spiffs\+\_\+file Spiffs\+Particle\+::open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{spiffs\+\_\+flags}]{flags,  }\item[{spiffs\+\_\+mode}]{mode = {\ttfamily 0777} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opens or creates a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the new file \\
+\hline
+{\em flags} & the flags for the open command, can be combinations of S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+A\+P\+P\+E\+ND, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+T\+R\+U\+NC, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+C\+R\+E\+AT, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+O\+N\+LY, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+W\+R\+O\+N\+LY, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+WR, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+D\+I\+R\+E\+CT, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+E\+X\+CL \\
+\hline
+{\em mode} & ignored, for posix compliance. This is an optional parameter.\\
+\hline
+\end{DoxyParams}
+You can combine these options, so for example to create (if necessary) and open, use S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+C\+R\+E\+A\+T$\vert$\+S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+WR.
+
+Note that there are no subdirectories in S\+P\+I\+F\+FS and the maximum filename length is 32. \mbox{\Hypertarget{class_spiffs_particle_ae2fdc1f28c8a83a55d9e2b18c734f631}\label{class_spiffs_particle_ae2fdc1f28c8a83a55d9e2b18c734f631}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!opendir@{opendir}}
+\index{opendir@{opendir}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{opendir()}{opendir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}}$\ast$ Spiffs\+Particle\+::opendir (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name,  }\item[{\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Opens a directory stream corresponding to the given name. The stream is positioned at the first entry in the directory. On hydrogen builds the name argument is ignored as hydrogen builds always correspond to a flat file structure -\/ no directories. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & the name of the directory \\
+\hline
+{\em d} & pointer the directory stream to be populated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a19e88cd7e5e352ab0222ac8d5ece430b}\label{class_spiffs_particle_a19e88cd7e5e352ab0222ac8d5ece430b}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!open\+File@{open\+File}}
+\index{open\+File@{open\+File}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{open\+File()}{openFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle_file}{Spiffs\+Particle\+File}} Spiffs\+Particle\+::open\+File (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{spiffs\+\_\+flags}]{flags,  }\item[{spiffs\+\_\+mode}]{mode = {\ttfamily 0777} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Open a file and return a \mbox{\hyperlink{class_spiffs_particle_file}{Spiffs\+Particle\+File}} object to easily manipulate it using Arduino/\+Wiring style calls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the new file \\
+\hline
+{\em flags} & the flags for the open command, can be combinations of S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+A\+P\+P\+E\+ND, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+T\+R\+U\+NC, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+C\+R\+E\+AT, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+O\+N\+LY, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+W\+R\+O\+N\+LY, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+WR, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+D\+I\+R\+E\+CT, S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+E\+X\+CL \\
+\hline
+{\em mode} & ignored, for posix compliance. This is an optional parameter.\\
+\hline
+\end{DoxyParams}
+You can combine these options, so for example to create (if necessary) and open, use S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+C\+R\+E\+A\+T$\vert$\+S\+P\+I\+F\+F\+S\+\_\+\+O\+\_\+\+R\+D\+WR.
+
+Note that there are no subdirectories in S\+P\+I\+F\+FS and the maximum filename length is 32. \mbox{\Hypertarget{class_spiffs_particle_a39cfb5a9c5bc2ae9f99a3c5c3bf4e64f}\label{class_spiffs_particle_a39cfb5a9c5bc2ae9f99a3c5c3bf4e64f}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!read@{read}}
+\index{read@{read}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::read (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh,  }\item[{void $\ast$}]{buf,  }\item[{s32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads from given filehandle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle \\
+\hline
+{\em buf} & where to put read data \\
+\hline
+{\em len} & how much to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes read, or -\/1 if error 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spiffs_particle_a258d05b35100c4b20fdd090810392e56}\label{class_spiffs_particle_a258d05b35100c4b20fdd090810392e56}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!readdir@{readdir}}
+\index{readdir@{readdir}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{readdir()}{readdir()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structspiffs__dirent}{spiffs\+\_\+dirent}}$\ast$ Spiffs\+Particle\+::readdir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structspiffs___d_i_r}{spiffs\+\_\+\+D\+IR}} $\ast$}]{d,  }\item[{struct \mbox{\hyperlink{structspiffs__dirent}{spiffs\+\_\+dirent}} $\ast$}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reads a directory into given spifs\+\_\+dirent struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & pointer to the directory stream \\
+\hline
+{\em e} & the dirent struct to be populated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+null if error or end of stream, else given dirent is returned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_spiffs_particle_a9ee304e19b76f4a68e8f772a92bbd104}\label{class_spiffs_particle_a9ee304e19b76f4a68e8f772a92bbd104}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!remove@{remove}}
+\index{remove@{remove}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::remove (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a file by path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the file to remove \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_ad016729fc6bc5560ddb5e5faba089b4f}\label{class_spiffs_particle_ad016729fc6bc5560ddb5e5faba089b4f}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!rename@{rename}}
+\index{rename@{rename}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{rename()}{rename()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::rename (\begin{DoxyParamCaption}\item[{const char $\ast$}]{old,  }\item[{const char $\ast$}]{new\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renames a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em old} & path of file to rename \\
+\hline
+{\em new\+Path} & new path of file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_af89255deb61819ea561163652784dcf1}\label{class_spiffs_particle_af89255deb61819ea561163652784dcf1}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!spiffs\+\_\+clearerr@{spiffs\+\_\+clearerr}}
+\index{spiffs\+\_\+clearerr@{spiffs\+\_\+clearerr}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{spiffs\+\_\+clearerr()}{spiffs\_clearerr()}}
+{\footnotesize\ttfamily void Spiffs\+Particle\+::spiffs\+\_\+clearerr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Clears last error. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fs} & the file system struct \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_a42bc28baf22af229ca371a0a1e2d16a6}\label{class_spiffs_particle_a42bc28baf22af229ca371a0a1e2d16a6}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!stat@{stat}}
+\index{stat@{stat}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{stat()}{stat()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::stat (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{\mbox{\hyperlink{structspiffs__stat}{spiffs\+\_\+stat}} $\ast$}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets file status by path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the file to stat \\
+\hline
+{\em s} & the stat struct to populate\\
+\hline
+\end{DoxyParams}
+You will typically only need the type and name fields of the stats structure. type is S\+P\+I\+F\+F\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+I\+LE or S\+P\+I\+F\+F\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+IR name is the name (c-\/string) \mbox{\Hypertarget{class_spiffs_particle_a38ddf851ffd2e4ade100114bfe4ca524}\label{class_spiffs_particle_a38ddf851ffd2e4ade100114bfe4ca524}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!tell@{tell}}
+\index{tell@{tell}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{tell()}{tell()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::tell (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get position in file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle of the file to check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_spiffs_particle_af52be85536c06520864bd4918b3fe927}\label{class_spiffs_particle_af52be85536c06520864bd4918b3fe927}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!truncate@{truncate}}
+\index{truncate@{truncate}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{truncate()}{truncate()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::truncate (\begin{DoxyParamCaption}\item[{const char $\ast$}]{path,  }\item[{s32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Truncate a file by path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & the path of the file to remove \\
+\hline
+{\em len} & the length to truncate to\\
+\hline
+\end{DoxyParams}
+Note\+: In P\+O\+S\+IX, len can be larger than the file size to make the file larger, but this does not work in S\+P\+I\+F\+FS. len must be less than or equal to the file size. \mbox{\Hypertarget{class_spiffs_particle_a2f1b8abb2c89f1935675240430907f7e}\label{class_spiffs_particle_a2f1b8abb2c89f1935675240430907f7e}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!unmount@{unmount}}
+\index{unmount@{unmount}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{unmount()}{unmount()}}
+{\footnotesize\ttfamily void Spiffs\+Particle\+::unmount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unmount the file system. All file handles will be flushed of any cached writes and closed. 
+
+This also frees the file descriptor, work, and cache buffers. \mbox{\Hypertarget{class_spiffs_particle_afc11a0266e8be6fb84ec4735d58281cb}\label{class_spiffs_particle_afc11a0266e8be6fb84ec4735d58281cb}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Cache\+Pages@{with\+Cache\+Pages}}
+\index{with\+Cache\+Pages@{with\+Cache\+Pages}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Cache\+Pages()}{withCachePages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Cache\+Pages (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the desired not of cache pages (default\+: 2) 
+
+The cache requires (logical page size + 32) $\ast$ cache\+Pages + 40 bytes. For the default logical page size of 256 and cache pages of 2, this is 616 bytes allocated at mount time.
+
+Note that you must call this before \mbox{\hyperlink{class_spiffs_particle_a55ce37570d764bb8d00698903211fee8}{mount()}}. Calling it after will have no effect. \mbox{\Hypertarget{class_spiffs_particle_a9f04b3f3f10aacad3281a8abaf14bac6}\label{class_spiffs_particle_a9f04b3f3f10aacad3281a8abaf14bac6}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Logical\+Block\+Size@{with\+Logical\+Block\+Size}}
+\index{with\+Logical\+Block\+Size@{with\+Logical\+Block\+Size}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Logical\+Block\+Size()}{withLogicalBlockSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Logical\+Block\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the logical block size (default\+: 4096) 
+
+This can\textquotesingle{}t be smaller than the physical block size or sector size (4096), but it could be larger. Making it larger might make sense if you have a small number of really large files, but usually 4096 is a reasonable value. \mbox{\Hypertarget{class_spiffs_particle_afb7595fab7db056f0c4594ee5fa2cd48}\label{class_spiffs_particle_afb7595fab7db056f0c4594ee5fa2cd48}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Logical\+Page\+Size@{with\+Logical\+Page\+Size}}
+\index{with\+Logical\+Page\+Size@{with\+Logical\+Page\+Size}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Logical\+Page\+Size()}{withLogicalPageSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Logical\+Page\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the logical page size (default\+: 256) 
+
+This must be greater than or equal to the physical page size, which is typically 256 for most flash chips. Note that there\textquotesingle{}s a work buffer of 2 $\ast$ logical page size required for mounting a volume. It\textquotesingle{}s rarely helpful to change this from the default, and it can\textquotesingle{}t be larger than the logical block size, and doesn\textquotesingle{}t really make any sense to make it larger than the physical block size (4096 bytes). So just leave it at 256. \mbox{\Hypertarget{class_spiffs_particle_a12f034a87b98381d976f81885b66b87a}\label{class_spiffs_particle_a12f034a87b98381d976f81885b66b87a}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Low\+Level\+Debug@{with\+Low\+Level\+Debug}}
+\index{with\+Low\+Level\+Debug@{with\+Low\+Level\+Debug}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Low\+Level\+Debug()}{withLowLevelDebug()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Low\+Level\+Debug (\begin{DoxyParamCaption}\item[{bool}]{value = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Enable (or disable) low level debug mode. 
+
+This mainly logs individual read and write calls. The S\+P\+I\+F\+FS file system likes to write two byte values as part of the magic, and low-\/level debug will print these out. If you\textquotesingle{}re having weird file system corruption errors, using this along with enabling trace logging may be helpful. \mbox{\Hypertarget{class_spiffs_particle_a0a88791b69d2711a32b31cef465f2ebe}\label{class_spiffs_particle_a0a88791b69d2711a32b31cef465f2ebe}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Max\+Open\+Files@{with\+Max\+Open\+Files}}
+\index{with\+Max\+Open\+Files@{with\+Max\+Open\+Files}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Max\+Open\+Files()}{withMaxOpenFiles()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Max\+Open\+Files (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum number of open files (default\+: 4) 
+
+Each open file descriptor requires 32 bytes of R\+AM. For the default of 4, this is 128 bytes allocated at mount time.
+
+Note that you must call this before \mbox{\hyperlink{class_spiffs_particle_a55ce37570d764bb8d00698903211fee8}{mount()}}. Calling it after will have no effect. \mbox{\Hypertarget{class_spiffs_particle_af99c2e3bdc38de7f33761b97a2680cec}\label{class_spiffs_particle_af99c2e3bdc38de7f33761b97a2680cec}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!with\+Physical\+Block\+Size@{with\+Physical\+Block\+Size}}
+\index{with\+Physical\+Block\+Size@{with\+Physical\+Block\+Size}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{with\+Physical\+Block\+Size()}{withPhysicalBlockSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_spiffs_particle}{Spiffs\+Particle}}\& Spiffs\+Particle\+::with\+Physical\+Block\+Size (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the physical block size (default\+: 4096) 
+
+This is the size of the erase block, or the sector size in the Spi\+Flash class. It can\textquotesingle{}t be smaller than the sector size, and it can\textquotesingle{}t be larger than the logical\+Block\+Size, so pretty much 4096 is what you should leave it at. \mbox{\Hypertarget{class_spiffs_particle_a24c19c610c1bc97647d8797ed632a814}\label{class_spiffs_particle_a24c19c610c1bc97647d8797ed632a814}} 
+\index{Spiffs\+Particle@{Spiffs\+Particle}!write@{write}}
+\index{write@{write}!Spiffs\+Particle@{Spiffs\+Particle}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily s32\+\_\+t Spiffs\+Particle\+::write (\begin{DoxyParamCaption}\item[{spiffs\+\_\+file}]{fh,  }\item[{const void $\ast$}]{buf,  }\item[{s32\+\_\+t}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Writes to given filehandle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fh} & the filehandle \\
+\hline
+{\em buf} & the data to write \\
+\hline
+{\em len} & how much to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of bytes written, or -\/1 if error 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Spiffs\+Particle\+R\+K.\+h\item 
+src/Spiffs\+Particle\+R\+K.\+cpp\end{DoxyCompactItemize}

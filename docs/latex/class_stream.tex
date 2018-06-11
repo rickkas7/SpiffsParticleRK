@@ -1,0 +1,282 @@
+\hypertarget{class_stream}{}\section{Stream Class Reference}
+\label{class_stream}\index{Stream@{Stream}}
+
+
+Arduino/\+Wiring \mbox{\hyperlink{class_stream}{Stream}} Class.  
+
+
+
+
+{\ttfamily \#include $<$spark\+\_\+wiring\+\_\+stream.\+h$>$}
+
+Inheritance diagram for Stream\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_stream}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{class_stream_a9c98a763395005c08ce95afb2f06c7b1}{available}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the number of a bytes available to read right now. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_stream_aea5dee9fcb038148515b7c9212d38dc0}{read}} ()=0
+\begin{DoxyCompactList}\small\item\em Read a byte from the stream. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_stream_a30c3c212ec6ea67277a708c5ea2501a5}{peek}} ()=0
+\begin{DoxyCompactList}\small\item\em Read a byte from the stream but do not remove it so read will return the same byte next time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stream_aa3ef2c34f152a0b2ea8de9139b9461da}\label{class_stream_aa3ef2c34f152a0b2ea8de9139b9461da}} 
+virtual void \mbox{\hyperlink{class_stream_aa3ef2c34f152a0b2ea8de9139b9461da}{flush}} ()=0
+\begin{DoxyCompactList}\small\item\em For output streams, writes any unwritten buffered data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stream_abaa50647d6dbb3baf7697a2691a06177}{set\+Timeout}} (system\+\_\+tick\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Sets the read timeout (default\+: 1000 milliseconds) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stream_a4bab30ccd324efd461dee46a2339f673}{find}} (char $\ast$target)
+\begin{DoxyCompactList}\small\item\em Reads data from the stream until the target string is found. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stream_ad851401f2318cdb1de05707e021b81d9}{find}} (char $\ast$target, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Reads data from the stream until the target string is found. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stream_ad1f5f6600832396fb38a897baf4de35b}{find\+Until}} (char $\ast$target, char $\ast$terminator)
+\begin{DoxyCompactList}\small\item\em Reads data from the stream until the target string is found or the terminator string is found. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stream_a3a9497de614792103ab8cb4759e01a69}{find\+Until}} (char $\ast$target, size\+\_\+t target\+Len, char $\ast$terminate, size\+\_\+t term\+Len)
+\begin{DoxyCompactList}\small\item\em Reads data from the stream until the target string is found or the terminator string is found. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{class_stream_a497ffcbcb4d5bb889a8fde487bcc1b98}{parse\+Int}} ()
+\begin{DoxyCompactList}\small\item\em returns the first valid (long) integer value from the current position \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_stream_a5e5a0cc11eb586d89dcb7fa8e53a87e8}{parse\+Float}} ()
+\begin{DoxyCompactList}\small\item\em returns the first valid float value from the current position \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_stream_a45fd1336a323ea83b16e8507055f44ea}{read\+Bytes}} (char $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Read chars from stream into buffer. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{class_stream_af84672a4fb2620466958d3118d4fea00}{read\+Bytes\+Until}} (char terminator, char $\ast$buffer, size\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Read chars from stream into buffer until the character terminator is found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_stream_a1c60bdda2b65d78e5a1362d51b856c5a}\label{class_stream_a1c60bdda2b65d78e5a1362d51b856c5a}} 
+String \mbox{\hyperlink{class_stream_a1c60bdda2b65d78e5a1362d51b856c5a}{read\+String}} ()
+\begin{DoxyCompactList}\small\item\em Reads the remainder of the file into a string. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{class_stream_a6a409da87c552909260d8cc428c5ca70}{read\+String\+Until}} (char terminator)
+\begin{DoxyCompactList}\small\item\em Reads the remainder of the file into a string or until terminator is found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Arduino/\+Wiring \mbox{\hyperlink{class_stream}{Stream}} Class. 
+
+Methods for reading data from a stream, such a serial port, T\+CP network stream, or a file. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_stream_a9c98a763395005c08ce95afb2f06c7b1}\label{class_stream_a9c98a763395005c08ce95afb2f06c7b1}} 
+\index{Stream@{Stream}!available@{available}}
+\index{available@{available}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily virtual int Stream\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of a bytes available to read right now. 
+
+For files, the number of bytes left to read in the file from the current file position. 
+
+Implemented in \mbox{\hyperlink{class_spiffs_particle_file_a0f1c61016a86835e325bf231d90f9fbf}{Spiffs\+Particle\+File}}.
+
+\mbox{\Hypertarget{class_stream_a4bab30ccd324efd461dee46a2339f673}\label{class_stream_a4bab30ccd324efd461dee46a2339f673}} 
+\index{Stream@{Stream}!find@{find}}
+\index{find@{find}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Stream\+::find (\begin{DoxyParamCaption}\item[{char $\ast$}]{target }\end{DoxyParamCaption})}
+
+
+
+Reads data from the stream until the target string is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The string to search for (null-\/terminated c-\/string)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if target string is found, false if timed out (see set\+Timeout) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stream_ad851401f2318cdb1de05707e021b81d9}\label{class_stream_ad851401f2318cdb1de05707e021b81d9}} 
+\index{Stream@{Stream}!find@{find}}
+\index{find@{find}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{find()}{find()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Stream\+::find (\begin{DoxyParamCaption}\item[{char $\ast$}]{target,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Reads data from the stream until the target string is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The string to search for. The string is specified by length so it does not need to be null-\/terminated.\\
+\hline
+{\em length} & The number of bytes in target to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if target string is found, false if timed out (see set\+Timeout) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stream_ad1f5f6600832396fb38a897baf4de35b}\label{class_stream_ad1f5f6600832396fb38a897baf4de35b}} 
+\index{Stream@{Stream}!find\+Until@{find\+Until}}
+\index{find\+Until@{find\+Until}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{find\+Until()}{findUntil()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Stream\+::find\+Until (\begin{DoxyParamCaption}\item[{char $\ast$}]{target,  }\item[{char $\ast$}]{terminator }\end{DoxyParamCaption})}
+
+
+
+Reads data from the stream until the target string is found or the terminator string is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The string to search for (null-\/terminated c-\/string)\\
+\hline
+{\em terminator} & The terminator string to search for (null-\/terminated c-\/string)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if target string is found, false if timed out (see set\+Timeout) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stream_a3a9497de614792103ab8cb4759e01a69}\label{class_stream_a3a9497de614792103ab8cb4759e01a69}} 
+\index{Stream@{Stream}!find\+Until@{find\+Until}}
+\index{find\+Until@{find\+Until}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{find\+Until()}{findUntil()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Stream\+::find\+Until (\begin{DoxyParamCaption}\item[{char $\ast$}]{target,  }\item[{size\+\_\+t}]{target\+Len,  }\item[{char $\ast$}]{terminate,  }\item[{size\+\_\+t}]{term\+Len }\end{DoxyParamCaption})}
+
+
+
+Reads data from the stream until the target string is found or the terminator string is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The string to search for. The string is specified by length so it does not need to be null-\/terminated.\\
+\hline
+{\em length} & The number of bytes in target to search for.\\
+\hline
+{\em terminator} & The terminator string to search for. The string is specified by length so it does not need to be null-\/terminated.\\
+\hline
+{\em term\+Len} & The number of bytes in terminator to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if target string is found, false if timed out (see set\+Timeout) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stream_a5e5a0cc11eb586d89dcb7fa8e53a87e8}\label{class_stream_a5e5a0cc11eb586d89dcb7fa8e53a87e8}} 
+\index{Stream@{Stream}!parse\+Float@{parse\+Float}}
+\index{parse\+Float@{parse\+Float}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{parse\+Float()}{parseFloat()}}
+{\footnotesize\ttfamily float Stream\+::parse\+Float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the first valid float value from the current position 
+
+Initial characters that are not digits (or the minus sign or .) are skipped float is terminated by the first character that is not a float character. Decimal part is separate by \textquotesingle{}.\textquotesingle{}. \mbox{\Hypertarget{class_stream_a497ffcbcb4d5bb889a8fde487bcc1b98}\label{class_stream_a497ffcbcb4d5bb889a8fde487bcc1b98}} 
+\index{Stream@{Stream}!parse\+Int@{parse\+Int}}
+\index{parse\+Int@{parse\+Int}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{parse\+Int()}{parseInt()}}
+{\footnotesize\ttfamily long Stream\+::parse\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns the first valid (long) integer value from the current position 
+
+Initial characters that are not digits (or the minus sign) are skipped integer is terminated by the first character that is not a digit. \mbox{\Hypertarget{class_stream_a30c3c212ec6ea67277a708c5ea2501a5}\label{class_stream_a30c3c212ec6ea67277a708c5ea2501a5}} 
+\index{Stream@{Stream}!peek@{peek}}
+\index{peek@{peek}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{peek()}{peek()}}
+{\footnotesize\ttfamily virtual int Stream\+::peek (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Read a byte from the stream but do not remove it so read will return the same byte next time. 
+
+\begin{DoxyReturn}{Returns}
+A byte value 0 -\/ 255, or -\/1 if there are no bytes available.
+\end{DoxyReturn}
+For files, the current file position is left unchanged. 
+
+Implemented in \mbox{\hyperlink{class_spiffs_particle_file_a2d6135f557d39fa6229aea72f8aab855}{Spiffs\+Particle\+File}}.
+
+\mbox{\Hypertarget{class_stream_aea5dee9fcb038148515b7c9212d38dc0}\label{class_stream_aea5dee9fcb038148515b7c9212d38dc0}} 
+\index{Stream@{Stream}!read@{read}}
+\index{read@{read}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily virtual int Stream\+::read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Read a byte from the stream. 
+
+\begin{DoxyReturn}{Returns}
+A byte value 0 -\/ 255, or -\/1 if there are no bytes available. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_spiffs_particle_file_a00ff81c014bb8373b3031e4b6ea48c16}{Spiffs\+Particle\+File}}.
+
+\mbox{\Hypertarget{class_stream_a45fd1336a323ea83b16e8507055f44ea}\label{class_stream_a45fd1336a323ea83b16e8507055f44ea}} 
+\index{Stream@{Stream}!read\+Bytes@{read\+Bytes}}
+\index{read\+Bytes@{read\+Bytes}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read\+Bytes()}{readBytes()}}
+{\footnotesize\ttfamily size\+\_\+t Stream\+::read\+Bytes (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Read chars from stream into buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to read into \\
+\hline
+{\em length} & The number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters placed in the buffer (0 means no valid data found) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_stream_af84672a4fb2620466958d3118d4fea00}\label{class_stream_af84672a4fb2620466958d3118d4fea00}} 
+\index{Stream@{Stream}!read\+Bytes\+Until@{read\+Bytes\+Until}}
+\index{read\+Bytes\+Until@{read\+Bytes\+Until}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read\+Bytes\+Until()}{readBytesUntil()}}
+{\footnotesize\ttfamily size\+\_\+t Stream\+::read\+Bytes\+Until (\begin{DoxyParamCaption}\item[{char}]{terminator,  }\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Read chars from stream into buffer until the character terminator is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em terminator} & The character to stop reading \\
+\hline
+{\em buffer} & The buffer to read into \\
+\hline
+{\em length} & The number of bytes to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of characters placed in the buffer (0 means no valid data found)
+\end{DoxyReturn}
+The terminator could be some thing like \textbackslash{}n (newline), \textbackslash{}t (tab), etc. depending on the data you are parsing. \mbox{\Hypertarget{class_stream_a6a409da87c552909260d8cc428c5ca70}\label{class_stream_a6a409da87c552909260d8cc428c5ca70}} 
+\index{Stream@{Stream}!read\+String\+Until@{read\+String\+Until}}
+\index{read\+String\+Until@{read\+String\+Until}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{read\+String\+Until()}{readStringUntil()}}
+{\footnotesize\ttfamily String Stream\+::read\+String\+Until (\begin{DoxyParamCaption}\item[{char}]{terminator }\end{DoxyParamCaption})}
+
+
+
+Reads the remainder of the file into a string or until terminator is found. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em terminator} & The character to stop reading \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_stream_abaa50647d6dbb3baf7697a2691a06177}\label{class_stream_abaa50647d6dbb3baf7697a2691a06177}} 
+\index{Stream@{Stream}!set\+Timeout@{set\+Timeout}}
+\index{set\+Timeout@{set\+Timeout}!Stream@{Stream}}
+\subsubsection{\texorpdfstring{set\+Timeout()}{setTimeout()}}
+{\footnotesize\ttfamily void Stream\+::set\+Timeout (\begin{DoxyParamCaption}\item[{system\+\_\+tick\+\_\+t}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Sets the read timeout (default\+: 1000 milliseconds) 
+
+This makes more sense for network and serial streams. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+docs/src/\mbox{\hyperlink{spark__wiring__stream_8h}{spark\+\_\+wiring\+\_\+stream.\+h}}\end{DoxyCompactItemize}

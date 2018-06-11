@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs__dirent" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_dirent</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs__dirent_1adb9c8e8a7c378611c58c02c4a28a9d85" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_id</type>
+        <definition>spiffs_obj_id spiffs_dirent::obj_id</definition>
+        <argsstring></argsstring>
+        <name>obj_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="316" column="1" bodyfile="src/spiffs.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__dirent_1abd0b462b485b05eb9ee1703b1ee5beab" prot="public" static="no" mutable="no">
+        <type>u8_t</type>
+        <definition>u8_t spiffs_dirent::name[SPIFFS_OBJ_NAME_LEN]</definition>
+        <argsstring>[SPIFFS_OBJ_NAME_LEN]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="317" column="1" bodyfile="src/spiffs.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__dirent_1a38414e80ef79bb9dcf421555e9435f89" prot="public" static="no" mutable="no">
+        <type>spiffs_obj_type</type>
+        <definition>spiffs_obj_type spiffs_dirent::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="318" column="1" bodyfile="src/spiffs.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__dirent_1a5cbe52f4c2bb069e109857246decc01b" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_dirent::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="319" column="1" bodyfile="src/spiffs.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__dirent_1af3dd1aaf484385078fa8f171c6c9456d" prot="public" static="no" mutable="no">
+        <type>spiffs_page_ix</type>
+        <definition>spiffs_page_ix spiffs_dirent::pix</definition>
+        <argsstring></argsstring>
+        <name>pix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="320" column="1" bodyfile="src/spiffs.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/spiffs.h" line="315" column="1" bodyfile="src/spiffs.h" bodystart="315" bodyend="324"/>
+    <listofallmembers>
+      <member refid="structspiffs__dirent_1abd0b462b485b05eb9ee1703b1ee5beab" prot="public" virt="non-virtual"><scope>spiffs_dirent</scope><name>name</name></member>
+      <member refid="structspiffs__dirent_1adb9c8e8a7c378611c58c02c4a28a9d85" prot="public" virt="non-virtual"><scope>spiffs_dirent</scope><name>obj_id</name></member>
+      <member refid="structspiffs__dirent_1af3dd1aaf484385078fa8f171c6c9456d" prot="public" virt="non-virtual"><scope>spiffs_dirent</scope><name>pix</name></member>
+      <member refid="structspiffs__dirent_1a5cbe52f4c2bb069e109857246decc01b" prot="public" virt="non-virtual"><scope>spiffs_dirent</scope><name>size</name></member>
+      <member refid="structspiffs__dirent_1a38414e80ef79bb9dcf421555e9435f89" prot="public" virt="non-virtual"><scope>spiffs_dirent</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

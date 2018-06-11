@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs___d_i_r" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_DIR</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs___d_i_r_1ad006821d5233083eaf04fa13fae90d88" prot="public" static="no" mutable="no">
+        <type><ref refid="structspiffs__t" kindref="compound">spiffs</ref> *</type>
+        <definition>spiffs* spiffs_DIR::fs</definition>
+        <argsstring></argsstring>
+        <name>fs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="327" column="1" bodyfile="src/spiffs.h" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs___d_i_r_1a822b1a3cdc78d84d377af471cde6cbc0" prot="public" static="no" mutable="no">
+        <type>spiffs_block_ix</type>
+        <definition>spiffs_block_ix spiffs_DIR::block</definition>
+        <argsstring></argsstring>
+        <name>block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="328" column="1" bodyfile="src/spiffs.h" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs___d_i_r_1a14d25754d25e2dab074381fd20395c2e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int spiffs_DIR::entry</definition>
+        <argsstring></argsstring>
+        <name>entry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="329" column="1" bodyfile="src/spiffs.h" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="8">
+        <label>spiffs_DIR</label>
+        <link refid="structspiffs___d_i_r"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>fs</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>spiffs_t</label>
+        <link refid="structspiffs__t"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>file_cb_f</edgelabel>
+          <edgelabel>check_cb_f</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>cfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>spiffs_config</label>
+        <link refid="structspiffs__config"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>hal_erase_f</edgelabel>
+          <edgelabel>hal_read_f</edgelabel>
+          <edgelabel>hal_write_f</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/spiffs.h" line="326" column="1" bodyfile="src/spiffs.h" bodystart="326" bodyend="330"/>
+    <listofallmembers>
+      <member refid="structspiffs___d_i_r_1a822b1a3cdc78d84d377af471cde6cbc0" prot="public" virt="non-virtual"><scope>spiffs_DIR</scope><name>block</name></member>
+      <member refid="structspiffs___d_i_r_1a14d25754d25e2dab074381fd20395c2e" prot="public" virt="non-virtual"><scope>spiffs_DIR</scope><name>entry</name></member>
+      <member refid="structspiffs___d_i_r_1ad006821d5233083eaf04fa13fae90d88" prot="public" virt="non-virtual"><scope>spiffs_DIR</scope><name>fs</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structspiffs__config" kind="struct" language="C++" prot="public">
+    <compoundname>spiffs_config</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structspiffs__config_1a2d2cc2d17896ba4f5e78c524cd7da76b" prot="public" static="no" mutable="no">
+        <type>spiffs_read</type>
+        <definition>spiffs_read spiffs_config::hal_read_f</definition>
+        <argsstring></argsstring>
+        <name>hal_read_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="209" column="1" bodyfile="src/spiffs.h" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1ab9402faf21097e938cb86b70efab38b4" prot="public" static="no" mutable="no">
+        <type>spiffs_write</type>
+        <definition>spiffs_write spiffs_config::hal_write_f</definition>
+        <argsstring></argsstring>
+        <name>hal_write_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="211" column="1" bodyfile="src/spiffs.h" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1a86af9c6671604e9c6e08cfe6c3fdfaeb" prot="public" static="no" mutable="no">
+        <type>spiffs_erase</type>
+        <definition>spiffs_erase spiffs_config::hal_erase_f</definition>
+        <argsstring></argsstring>
+        <name>hal_erase_f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="213" column="1" bodyfile="src/spiffs.h" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1ad1746f2435254dd38ebdbf167a3289e0" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_config::phys_size</definition>
+        <argsstring></argsstring>
+        <name>phys_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="216" column="1" bodyfile="src/spiffs.h" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1ad14f81b04bcc96bb09909015e06a5b3f" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_config::phys_addr</definition>
+        <argsstring></argsstring>
+        <name>phys_addr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="219" column="1" bodyfile="src/spiffs.h" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1a5d33e08b152880f482c976f897a1632f" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_config::phys_erase_block</definition>
+        <argsstring></argsstring>
+        <name>phys_erase_block</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="221" column="1" bodyfile="src/spiffs.h" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1afda08e08a059b922706188f6f2c557ac" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_config::log_block_size</definition>
+        <argsstring></argsstring>
+        <name>log_block_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="226" column="1" bodyfile="src/spiffs.h" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structspiffs__config_1a2525c28d372c9d46152b9997972c25fd" prot="public" static="no" mutable="no">
+        <type>u32_t</type>
+        <definition>u32_t spiffs_config::log_page_size</definition>
+        <argsstring></argsstring>
+        <name>log_page_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/spiffs.h" line="229" column="1" bodyfile="src/spiffs.h" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>spiffs_t</label>
+        <link refid="structspiffs__t"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>file_cb_f</edgelabel>
+          <edgelabel>check_cb_f</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>cfg</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>spiffs_config</label>
+        <link refid="structspiffs__config"/>
+        <childnode refid="6" relation="usage">
+          <edgelabel>hal_erase_f</edgelabel>
+          <edgelabel>hal_read_f</edgelabel>
+          <edgelabel>hal_write_f</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/spiffs.h" line="207" column="1" bodyfile="src/spiffs.h" bodystart="207" bodyend="236"/>
+    <listofallmembers>
+      <member refid="structspiffs__config_1a86af9c6671604e9c6e08cfe6c3fdfaeb" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>hal_erase_f</name></member>
+      <member refid="structspiffs__config_1a2d2cc2d17896ba4f5e78c524cd7da76b" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>hal_read_f</name></member>
+      <member refid="structspiffs__config_1ab9402faf21097e938cb86b70efab38b4" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>hal_write_f</name></member>
+      <member refid="structspiffs__config_1afda08e08a059b922706188f6f2c557ac" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>log_block_size</name></member>
+      <member refid="structspiffs__config_1a2525c28d372c9d46152b9997972c25fd" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>log_page_size</name></member>
+      <member refid="structspiffs__config_1ad14f81b04bcc96bb09909015e06a5b3f" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>phys_addr</name></member>
+      <member refid="structspiffs__config_1a5d33e08b152880f482c976f897a1632f" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>phys_erase_block</name></member>
+      <member refid="structspiffs__config_1ad1746f2435254dd38ebdbf167a3289e0" prot="public" virt="non-virtual"><scope>spiffs_config</scope><name>phys_size</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

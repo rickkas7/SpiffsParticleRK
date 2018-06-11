@@ -1,0 +1,472 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_stream" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Stream</compoundname>
+    <basecompoundref refid="class_print" prot="public" virt="non-virtual">Print</basecompoundref>
+    <derivedcompoundref refid="class_spiffs_particle_file" prot="public" virt="non-virtual">SpiffsParticleFile</derivedcompoundref>
+    <includes refid="spark__wiring__stream_8h" local="no">spark_wiring_stream.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_stream_1a9c98a763395005c08ce95afb2f06c7b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Stream::available</definition>
+        <argsstring>()=0</argsstring>
+        <name>available</name>
+        <reimplementedby refid="class_spiffs_particle_file_1a0f1c61016a86835e325bf231d90f9fbf">available</reimplementedby>
+        <briefdescription>
+<para>Returns the number of a bytes available to read right now. </para>        </briefdescription>
+        <detaileddescription>
+<para>For files, the number of bytes left to read in the file from the current file position. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1aea5dee9fcb038148515b7c9212d38dc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Stream::read</definition>
+        <argsstring>()=0</argsstring>
+        <name>read</name>
+        <reimplementedby refid="class_spiffs_particle_file_1a00ff81c014bb8373b3031e4b6ea48c16">read</reimplementedby>
+        <briefdescription>
+<para>Read a byte from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A byte value 0 - 255, or -1 if there are no bytes available. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a30c3c212ec6ea67277a708c5ea2501a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>int</type>
+        <definition>virtual int Stream::peek</definition>
+        <argsstring>()=0</argsstring>
+        <name>peek</name>
+        <reimplementedby refid="class_spiffs_particle_file_1a2d6135f557d39fa6229aea72f8aab855">peek</reimplementedby>
+        <briefdescription>
+<para>Read a byte from the stream but do not remove it so read will return the same byte next time. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A byte value 0 - 255, or -1 if there are no bytes available.</para></simplesect>
+For files, the current file position is left unchanged. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1aa3ef2c34f152a0b2ea8de9139b9461da" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Stream::flush</definition>
+        <argsstring>()=0</argsstring>
+        <name>flush</name>
+        <reimplementedby refid="class_spiffs_particle_file_1a25a803a411c55fe0ddf1c5d2576d8055">flush</reimplementedby>
+        <briefdescription>
+<para>For output streams, writes any unwritten buffered data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1abaa50647d6dbb3baf7697a2691a06177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Stream::setTimeout</definition>
+        <argsstring>(system_tick_t timeout)</argsstring>
+        <name>setTimeout</name>
+        <param>
+          <type>system_tick_t</type>
+          <declname>timeout</declname>
+        </param>
+        <briefdescription>
+<para>Sets the read timeout (default: 1000 milliseconds) </para>        </briefdescription>
+        <detaileddescription>
+<para>This makes more sense for network and serial streams. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="100" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a4bab30ccd324efd461dee46a2339f673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Stream::find</definition>
+        <argsstring>(char *target)</argsstring>
+        <name>find</name>
+        <param>
+          <type>char *</type>
+          <declname>target</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the stream until the target string is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for (null-terminated c-string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if target string is found, false if timed out (see setTimeout) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1ad851401f2318cdb1de05707e021b81d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Stream::find</definition>
+        <argsstring>(char *target, size_t length)</argsstring>
+        <name>find</name>
+        <param>
+          <type>char *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the stream until the target string is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for. The string is specified by length so it does not need to be null-terminated.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes in target to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if target string is found, false if timed out (see setTimeout) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="120" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1ad1f5f6600832396fb38a897baf4de35b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Stream::findUntil</definition>
+        <argsstring>(char *target, char *terminator)</argsstring>
+        <name>findUntil</name>
+        <param>
+          <type>char *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>terminator</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the stream until the target string is found or the terminator string is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for (null-terminated c-string)</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The terminator string to search for (null-terminated c-string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if target string is found, false if timed out (see setTimeout) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="130" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a3a9497de614792103ab8cb4759e01a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Stream::findUntil</definition>
+        <argsstring>(char *target, size_t targetLen, char *terminate, size_t termLen)</argsstring>
+        <name>findUntil</name>
+        <param>
+          <type>char *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>targetLen</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>terminate</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>termLen</declname>
+        </param>
+        <briefdescription>
+<para>Reads data from the stream until the target string is found or the terminator string is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string to search for. The string is specified by length so it does not need to be null-terminated.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes in target to search for.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The terminator string to search for. The string is specified by length so it does not need to be null-terminated.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>termLen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes in terminator to search for.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if target string is found, false if timed out (see setTimeout) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="145" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a497ffcbcb4d5bb889a8fde487bcc1b98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>long</type>
+        <definition>long Stream::parseInt</definition>
+        <argsstring>()</argsstring>
+        <name>parseInt</name>
+        <briefdescription>
+<para>returns the first valid (long) integer value from the current position </para>        </briefdescription>
+        <detaileddescription>
+<para>Initial characters that are not digits (or the minus sign) are skipped integer is terminated by the first character that is not a digit. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a5e5a0cc11eb586d89dcb7fa8e53a87e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Stream::parseFloat</definition>
+        <argsstring>()</argsstring>
+        <name>parseFloat</name>
+        <briefdescription>
+<para>returns the first valid float value from the current position </para>        </briefdescription>
+        <detaileddescription>
+<para>Initial characters that are not digits (or the minus sign or .) are skipped float is terminated by the first character that is not a float character. Decimal part is separate by &apos;.&apos;. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="164" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a45fd1336a323ea83b16e8507055f44ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Stream::readBytes</definition>
+        <argsstring>(char *buffer, size_t length)</argsstring>
+        <name>readBytes</name>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Read chars from stream into buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of characters placed in the buffer (0 means no valid data found) </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1af84672a4fb2620466958d3118d4fea00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t Stream::readBytesUntil</definition>
+        <argsstring>(char terminator, char *buffer, size_t length)</argsstring>
+        <name>readBytesUntil</name>
+        <param>
+          <type>char</type>
+          <declname>terminator</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>Read chars from stream into buffer until the character terminator is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to stop reading </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The buffer to read into </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of bytes to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the number of characters placed in the buffer (0 means no valid data found)</para></simplesect>
+The terminator could be some thing like \n (newline), \t (tab), etc. depending on the data you are parsing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a1c60bdda2b65d78e5a1362d51b856c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Stream::readString</definition>
+        <argsstring>()</argsstring>
+        <name>readString</name>
+        <briefdescription>
+<para>Reads the remainder of the file into a string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="192" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_stream_1a6a409da87c552909260d8cc428c5ca70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Stream::readStringUntil</definition>
+        <argsstring>(char terminator)</argsstring>
+        <name>readStringUntil</name>
+        <param>
+          <type>char</type>
+          <declname>terminator</declname>
+        </param>
+        <briefdescription>
+<para>Reads the remainder of the file into a string or until terminator is found. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>terminator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The character to stop reading </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="docs/src/spark_wiring_stream.h" line="199" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Arduino/Wiring <ref refid="class_stream" kindref="compound">Stream</ref> Class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Methods for reading data from a stream, such a serial port, TCP network stream, or a file. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="44">
+        <label>Print</label>
+        <link refid="class_print"/>
+      </node>
+      <node id="45">
+        <label>SpiffsParticleFile</label>
+        <link refid="class_spiffs_particle_file"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>Stream</label>
+        <link refid="class_stream"/>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="47">
+        <label>Print</label>
+        <link refid="class_print"/>
+      </node>
+      <node id="46">
+        <label>Stream</label>
+        <link refid="class_stream"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="docs/src/spark_wiring_stream.h" line="50" column="1" bodyfile="docs/src/spark_wiring_stream.h" bodystart="49" bodyend="209"/>
+    <listofallmembers>
+      <member refid="class_stream_1a9c98a763395005c08ce95afb2f06c7b1" prot="public" virt="pure-virtual"><scope>Stream</scope><name>available</name></member>
+      <member refid="class_print_1aec9ecf84cc6d9087a650def3cefc459e" prot="public" virt="non-virtual"><scope>Stream</scope><name>clearWriteError</name></member>
+      <member refid="class_stream_1a4bab30ccd324efd461dee46a2339f673" prot="public" virt="non-virtual"><scope>Stream</scope><name>find</name></member>
+      <member refid="class_stream_1ad851401f2318cdb1de05707e021b81d9" prot="public" virt="non-virtual"><scope>Stream</scope><name>find</name></member>
+      <member refid="class_stream_1ad1f5f6600832396fb38a897baf4de35b" prot="public" virt="non-virtual"><scope>Stream</scope><name>findUntil</name></member>
+      <member refid="class_stream_1a3a9497de614792103ab8cb4759e01a69" prot="public" virt="non-virtual"><scope>Stream</scope><name>findUntil</name></member>
+      <member refid="class_stream_1aa3ef2c34f152a0b2ea8de9139b9461da" prot="public" virt="pure-virtual"><scope>Stream</scope><name>flush</name></member>
+      <member refid="class_print_1a88a4a829fb5d589efb43955ad0cbddcc" prot="public" virt="non-virtual"><scope>Stream</scope><name>getWriteError</name></member>
+      <member refid="class_stream_1a5e5a0cc11eb586d89dcb7fa8e53a87e8" prot="public" virt="non-virtual"><scope>Stream</scope><name>parseFloat</name></member>
+      <member refid="class_stream_1a497ffcbcb4d5bb889a8fde487bcc1b98" prot="public" virt="non-virtual"><scope>Stream</scope><name>parseInt</name></member>
+      <member refid="class_stream_1a30c3c212ec6ea67277a708c5ea2501a5" prot="public" virt="pure-virtual"><scope>Stream</scope><name>peek</name></member>
+      <member refid="class_print_1acfe80773011eb17dfb52c2fba517a093" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1a1e411d07a8ffec5faf7ce485bac0f029" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1ae35481e77567618140cd58d8b96d3747" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1aa28ddbde83b14df73b41c919ecc4478f" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1afcd7d3a184df961a502643e4fb638c52" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1a0c663ac015ebc037ea044ba2e2cf2947" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1acb8c6dcd4339b024436002aa9a6f4be2" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1ad89472bdb6539423a42d350beec02ff4" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1a901b0f06ae34aab31b8fbb4298f0596e" prot="public" virt="non-virtual"><scope>Stream</scope><name>print</name></member>
+      <member refid="class_print_1a08a461c9fee5fd8f5795d6e9f61e3d5b" prot="public" virt="non-virtual"><scope>Stream</scope><name>printf</name></member>
+      <member refid="class_print_1ad337ce3f7977411b7d34d47a51e5737e" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a80fdd92db4b396062586bcb3e08d3835" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a000b3fd5b723cb6c7db0d3231a9ef2f8" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a82aa91bbd859f28a0a3b4869e5bfcadd" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a2608232c1f10f654111ff447de16d60b" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a82bbe59b28440c29e55ff3597eb45376" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1afa936d7e8dd329d9162f2cd28f42681e" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a178b90baf9f74f0945f5c64aafec59ea" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a20f9e104153b62e720c9b4c348b44f00" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1a169b128f9e22f0c15883768f580541a2" prot="public" virt="non-virtual"><scope>Stream</scope><name>println</name></member>
+      <member refid="class_print_1afa41aa5211c54b7b4d79b9286880c337" prot="public" virt="non-virtual"><scope>Stream</scope><name>printlnf</name></member>
+      <member refid="class_stream_1aea5dee9fcb038148515b7c9212d38dc0" prot="public" virt="pure-virtual"><scope>Stream</scope><name>read</name></member>
+      <member refid="class_stream_1a45fd1336a323ea83b16e8507055f44ea" prot="public" virt="non-virtual"><scope>Stream</scope><name>readBytes</name></member>
+      <member refid="class_stream_1af84672a4fb2620466958d3118d4fea00" prot="public" virt="non-virtual"><scope>Stream</scope><name>readBytesUntil</name></member>
+      <member refid="class_stream_1a1c60bdda2b65d78e5a1362d51b856c5a" prot="public" virt="non-virtual"><scope>Stream</scope><name>readString</name></member>
+      <member refid="class_stream_1a6a409da87c552909260d8cc428c5ca70" prot="public" virt="non-virtual"><scope>Stream</scope><name>readStringUntil</name></member>
+      <member refid="class_stream_1abaa50647d6dbb3baf7697a2691a06177" prot="public" virt="non-virtual"><scope>Stream</scope><name>setTimeout</name></member>
+      <member refid="class_print_1a5be30d49adae2406a270c29ba9a3e0a3" prot="public" virt="pure-virtual"><scope>Stream</scope><name>write</name></member>
+      <member refid="class_print_1a5b40e0e9cab1f2fe5bb0cb22ffe5adda" prot="public" virt="non-virtual"><scope>Stream</scope><name>write</name></member>
+      <member refid="class_print_1a88864e109589a5be9b0f5ba1327f8421" prot="public" virt="virtual"><scope>Stream</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
