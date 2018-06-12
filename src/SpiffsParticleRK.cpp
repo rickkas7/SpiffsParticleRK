@@ -1,6 +1,16 @@
+/**
+ * SpiffsParticleRK - Particle wrapper for SPIFFS library
+ *
+ * Port and this wrapper: https://github.com/rickkas7/SpiffsParticleRK
+ * Original SPIFFS library: https://github.com/pellepl/spiffs/
+ *
+ * License: MIT (both)
+ */
+
 
 #include "SpiffsParticleRK.h"
 
+Logger log("app.spiffs");
 
 static os_mutex_t _spiffsMutex = []() {
 	os_mutex_t m;
@@ -71,6 +81,23 @@ void SpiffsParticle::unmount() {
 	cacheBuffer = 0;
 }
 
+s32_t SpiffsParticle::mountAndFormatIfNecessary(spiffs_check_callback callback) {
+	s32_t res = mount(NULL);
+	log.info("mount res=%ld", res);
+
+	if (res == SPIFFS_ERR_NOT_A_FS) {
+		res = format();
+		log.info("format res=%ld", res);
+
+		if (res == SPIFFS_OK) {
+			res = mount(NULL);
+			log.info("mount after format res=%ld", res);
+		}
+	}
+	return res;
+}
+
+
 s32_t SpiffsParticle::erase() {
 	if (mounted()) {
 		return SPIFFS_ERR_MOUNTED;
@@ -87,10 +114,10 @@ s32_t SpiffsParticle::readCallback(u32_t addr, u32_t size, u8_t *dst) {
 
 	if (lowLevelDebug) {
 		if (size == 2) {
-			Log.trace("read addr=0x%lx size=%lu data=%02x%02x", addr, size, dst[0], dst[1]);
+			log.trace("read addr=0x%lx size=%lu data=%02x%02x", addr, size, dst[0], dst[1]);
 		}
 		else {
-			Log.trace("read addr=0x%lx size=%lu", addr, size);
+			log.trace("read addr=0x%lx size=%lu", addr, size);
 		}
 	}
 
@@ -102,10 +129,10 @@ s32_t SpiffsParticle::writeCallback(u32_t addr, u32_t size, u8_t *src) {
 
 	if (lowLevelDebug) {
 		if (size == 2) {
-			Log.trace("write addr=0x%lx size=%lu data=%02x%02x", addr, size, src[0], src[1]);
+			log.trace("write addr=0x%lx size=%lu data=%02x%02x", addr, size, src[0], src[1]);
 		}
 		else {
-			Log.trace("write addr=0x%lx size=%lu", addr, size);
+			log.trace("write addr=0x%lx size=%lu", addr, size);
 		}
 	}
 
@@ -118,7 +145,7 @@ s32_t SpiffsParticle::eraseCallback(u32_t addr, u32_t size) {
 
 	while(size >= sectorSize) {
 		if (lowLevelDebug) {
-			Log.trace("erase sector addr=0x%lx size=%lu", addr, sectorSize);
+			log.trace("erase sector addr=0x%lx size=%lu", addr, sectorSize);
 		}
 		flash.sectorErase(addr);
 		addr += sectorSize;

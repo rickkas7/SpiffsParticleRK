@@ -172,6 +172,24 @@ void SPIFFS_unmount(spiffs *fs) {
   SPIFFS_UNLOCK(fs);
 }
 
+void SPIFFS_flush(spiffs *fs) {
+  SPIFFS_API_DBG("%s\n", __func__);
+  if (!SPIFFS_CHECK_CFG(fs) || !SPIFFS_CHECK_MOUNT(fs)) return;
+  SPIFFS_LOCK(fs);
+  u32_t i;
+  spiffs_fd *fds = (spiffs_fd *)fs->fd_space;
+  for (i = 0; i < fs->fd_count; i++) {
+    spiffs_fd *cur_fd = &fds[i];
+    if (cur_fd->file_nbr != 0) {
+#if SPIFFS_CACHE
+      (void)spiffs_fflush_cache(fs, cur_fd->file_nbr);
+#endif
+    }
+  }
+
+  SPIFFS_UNLOCK(fs);
+}
+
 s32_t SPIFFS_errno(spiffs *fs) {
   return fs->err_code;
 }

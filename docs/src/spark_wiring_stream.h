@@ -187,14 +187,14 @@ class Stream : public Print
   // Arduino String functions to be added here
 
   /**
-   * @brief Reads the remainder of the file into a string
+   * @brief Reads the remainder of the file into a string.
    */
   String readString();
 
   /**
-   * @brief Reads the remainder of the file into a string or until terminator is found
+   * @brief Reads the remainder of the file into a string or until terminator is found.
    *
-   * @param terminator The character to stop reading
+   * @param terminator The character to stop reading at.
    */
   String readStringUntil(char terminator);
 

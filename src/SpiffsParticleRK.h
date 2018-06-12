@@ -1,10 +1,10 @@
 /**
  * SpiffsParticleRK - Particle wrapper for SPIFFS library
  *
- * Port: https://github.com/rickkas7/SpiffsParticleRK
- * Original: https://github.com/pellepl/spiffs/
+ * Port and this wrapper: https://github.com/rickkas7/SpiffsParticleRK
+ * Original SPIFFS library: https://github.com/pellepl/spiffs/
  *
- * License: MIT
+ * License: MIT (both)
  */
 
 #ifndef __SPIFFSPARTICLERK_H
@@ -331,7 +331,7 @@ public:
 	 *
 	 * Thus the total RAM allocated during mount is by default is 1256 bytes.
 	 */
-	s32_t mount(spiffs_check_callback callback);
+	s32_t mount(spiffs_check_callback callback = 0);
 
 	/**
 	 * @brief Unmount the file system. All file handles will be flushed of any cached writes and closed.
@@ -339,6 +339,11 @@ public:
 	 * This also frees the file descriptor, work, and cache buffers.
 	 */
 	void unmount();
+
+	/**
+	 * @brief Mount the file system and format if necessary
+	 */
+	s32_t mountAndFormatIfNecessary(spiffs_check_callback callback = 0);
 
 	/**
 	 * @brief Format the file system
@@ -355,6 +360,16 @@ public:
 	 * unmount it before erasing.
 	 */
 	s32_t erase();
+
+	/**
+	 * @brief Flush all cached writes for all file handles, but leave the files open and the volume mounted.
+	 *
+	 * You'd typically do this before doing a stop mode sleep (pin + time) where the RAM contents are preserved
+	 * but you want to make sure the data is saved. This saves having to mount the volume again.
+	 *
+	 * If you are using SLEEP_MODE_DEEP you should use unmount() instead.
+	 */
+	inline void flush() { SPIFFS_flush(&fs); };
 
 	/**
 	 * @brief Creates a new file.

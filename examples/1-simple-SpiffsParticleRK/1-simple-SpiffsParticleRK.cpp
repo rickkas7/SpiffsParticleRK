@@ -2,31 +2,29 @@
 
 #include "SpiffsParticleRK.h"
 
-SerialLogHandler logHandler; // (LOG_LEVEL_TRACE);
-SpiFlashISSI spiFlash(SPI, A2);
+// Pick a debug level from one of these two:
+// SerialLogHandler logHandler;
+SerialLogHandler logHandler(LOG_LEVEL_TRACE);
+
+// Chose a flash configuration:
+SpiFlashISSI spiFlash(SPI, A2); 		// ISSI flash on SPI (A pins)
+// SpiFlashISSI spiFlash(SPI1, D5);		// ISSI flash on SPI1 (D pins)
+// SpiFlashMacronix spiFlash(SPI1, D5);	// Macronix flash on SPI1 (D pins), typical config for E series
+// SpiFlashWinbond spiFlash(SPI, A2);	// Winbond flash on SPI (A pins)
+// SpiFlashP1 spiFlash;					// P1 external flash inside the P1 module
+
+// Create an object for the SPIFFS file system
 SpiffsParticle fs(spiFlash);
 
 void setup() {
 	Serial.begin();
 
-	delay(4000);
-
 	spiFlash.begin();
 
 	fs.withPhysicalSize(64 * 1024);
 
-	s32_t res = fs.mount(NULL);
+	s32_t res = fs.mountAndFormatIfNecessary();
 	Log.info("mount res=%d", res);
-
-	if (res == SPIFFS_ERR_NOT_A_FS) {
-		res = fs.format();
-		Log.info("format res=%d", res);
-
-		if (res == SPIFFS_OK) {
-			res = fs.mount(NULL);
-			Log.info("mount after format res=%d", res);
-		}
-	}
 
 	if (res == SPIFFS_OK) {
 		SpiffsParticleFile f = fs.openFile("test", SPIFFS_O_RDWR|SPIFFS_O_CREAT);

@@ -66,24 +66,26 @@ class Print
     virtual ~Print() {}
 #endif
     /**
-     * @brief Return the last error code
+     * @brief Return the last error code. 0 means no error.
      */
     int getWriteError() { return write_error; }
 
     /**
-     * @brief Clear the last error code
+     * @brief Clear the last error code to 0.
      */
     void clearWriteError() { setWriteError(0); }
 
     /**
-     * @brief Write a single byte to the stream or file
+     * @brief Write a single byte to the stream or file.
+     *
+     * @param c The byte to write. All values 0 - 255 are allowed.
      */
-    virtual size_t write(uint8_t) = 0;
+    virtual size_t write(uint8_t c) = 0;
 
     /**
-     * @brief Write a null-terminated c-string the stream or file
+     * @brief Write a null-terminated c-string the stream or file.
      *
-     * @param str point to a null-terminated c-string
+     * @param str point to a null-terminated c-string.
      */
     size_t write(const char *str) {
       if (str == NULL) return 0;
@@ -93,7 +95,7 @@ class Print
     /**
      * @brief Write a bytes specified by a buffer and length to the stream or file
      *
-     * @param buffer pointer to the buffer
+     * @param buffer pointer to the buffer. The data does not need to be null-terminated.
      * @param size size in bytes
      */
     virtual size_t write(const uint8_t *buffer, size_t size);
@@ -109,60 +111,60 @@ class Print
     size_t print(char);
 
     /**
-     * @brief Print an unsigned char (byte value) in the specified base to the stream or file
+     * @brief Print an unsigned char (byte value, 8 bits) in the specified base to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t print(unsigned char value, int base = DEC);
 
     /**
-     * @brief Print an int the specified base to the stream or file
+     * @brief Print an int (32 bit integer) the specified base to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t print(int value, int base = DEC);
 
     /**
-     * @brief Print an unsigned int the specified base to the stream or file
+     * @brief Print an unsigned int (32 bit unsigned integer) the specified base to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t print(unsigned int value, int base = DEC);
 
     /**
-     * @brief Print a long the specified base to the stream or file
+     * @brief Print a long (32 bit integer) the specified base to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t print(long value, int base = DEC);
 
     /**
-     * @brief Print a unsigned long the specified base to the stream or file
+     * @brief Print a unsigned long (32 bit unsigned integer) the specified base to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t print(unsigned long value, int base = DEC);
 
     /**
-     * @brief Print a double floating point value to the stream or file
+     * @brief Print a double floating point value to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param dec The number of decimal places to include for the fractional part. Default: 2
      */
     size_t print(double value, int dec = 2);
 
     /**
-     * @brief Print an object derived from Printable to the stream or file
+     * @brief Print an object derived from Printable to the stream or file.
      */
     size_t print(const Printable&);
 
@@ -171,25 +173,25 @@ class Print
 #endif
 
     /**
-     * @brief Print a null-terminated array of char variables (a c-string) plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print a null-terminated array of char variables (a c-string) plus a CRLF end-of-line terminator to the stream or file.
      */
     size_t println(const char[]);
 
     /**
-     * @brief Print a single character plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print a single character plus a CRLF end-of-line terminator to the stream or file.
      */
     size_t println(char value);
 
     /**
-     * @brief Print an unsigned char (byte value) in the specified base plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print an unsigned char (byte value. 8 bits) in the specified base plus a CRLF end-of-line terminator to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t println(unsigned char value, int base = DEC);
     /**
-     * @brief Print an int the specified base to plus a CRLF end-of-line terminator the stream or file
+     * @brief Print an int (32 bit integer) the specified base to plus a CRLF end-of-line terminator the stream or file.
      *
      * @param value The value to print
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
@@ -198,7 +200,7 @@ class Print
     size_t println(int value, int base = DEC);
 
     /**
-     * @brief Print an unsigned int the specified base plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print an unsigned int (32 bit unsigned integer) the specified base plus a CRLF end-of-line terminator to the stream or file.
      *
      * @param value The value to print
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
@@ -206,7 +208,7 @@ class Print
      */
     size_t println(unsigned int value, int base = DEC);
     /**
-     * @brief Print a long the specified base plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print a long (32 bit signed integer) the specified base plus a CRLF end-of-line terminator to the stream or file.
      *
      * @param value The value to print
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
@@ -214,17 +216,18 @@ class Print
      */
     size_t println(long value, int base = DEC);
     /**
-     * @brief Print a unsigned long the specified base plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print a unsigned long (32 bit unsigned integer) the specified base plus a CRLF end-of-line terminator to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param base The base to print. Default is DEC (decimal). Other values are HEX (hexadecimal),
      * OCT (octal), and BIN (binary).
      */
     size_t println(unsigned long value, int base = DEC);
+
     /**
-     * @brief Print a double floating point value plus a CRLF end-of-line terminator to the stream or file
+     * @brief Print a double floating point value plus a CRLF end-of-line terminator to the stream or file.
      *
-     * @param value The value to print
+     * @param value The value to print.
      * @param dec The number of decimal places to include for the fractional part. Default: 2
      */
     size_t println(double value, int dec = 2);

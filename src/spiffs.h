@@ -408,6 +408,13 @@ s32_t SPIFFS_mount(spiffs *fs, spiffs_config *config, u8_t *work,
 void SPIFFS_unmount(spiffs *fs);
 
 /**
+ * Flush all cached writes for all file handles, but leave the files open
+ * and the volume mounted.
+ * @param fs            the file system struct
+ */
+void SPIFFS_flush(spiffs *fs);
+
+/**
  * Creates a new file.
  * @param fs            the file system struct
  * @param path          the path of the new file
