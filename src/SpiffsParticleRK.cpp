@@ -195,18 +195,22 @@ void SpiffsParticle::checkCallbackStatic(struct spiffs_t *fs, spiffs_check_type 
 
 extern "C"
 void spiffsParticleInfoLog(const char *fmt, ...) {
-    va_list args;
-    va_start(args, fmt);
-    log_printf_v(LOG_LEVEL_INFO, "app.spiffs", nullptr, fmt, args);
-    va_end(args);
+	if (log.isInfoEnabled()) {
+		va_list args;
+		va_start(args, fmt);
+		log_printf_v(LOG_LEVEL_INFO, "app.spiffs", nullptr, fmt, args);
+		va_end(args);
+	}
 }
 
 extern "C"
 void spiffsParticleTraceLog(const char *fmt, ...) {
-    va_list args;
-    va_start(args, fmt);
-    log_printf_v(LOG_LEVEL_TRACE, "app.spiffs", nullptr, fmt, args);
-    va_end(args);
+	if (log.isTraceEnabled()) {
+		va_list args;
+		va_start(args, fmt);
+		log_printf_v(LOG_LEVEL_TRACE, "app.spiffs", nullptr, fmt, args);
+		va_end(args);
+	}
 }
 
 extern "C"
@@ -303,10 +307,4 @@ s32_t SpiffsParticleFile::length() {
 	}
 	return res;
 }
-
-
-
-
-
-
 

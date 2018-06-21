@@ -105,18 +105,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12f034a87b98381d976f81885b66b87a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_spiffs_particle.html">SpiffsParticle</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a12f034a87b98381d976f81885b66b87a">withLowLevelDebug</a> (bool value=true)</td></tr>
 <tr class="memdesc:a12f034a87b98381d976f81885b66b87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable (or disable) low level debug mode.  <a href="#a12f034a87b98381d976f81885b66b87a">More...</a><br /></td></tr>
 <tr class="separator:a12f034a87b98381d976f81885b66b87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55ce37570d764bb8d00698903211fee8"><td class="memItemLeft" align="right" valign="top">s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a55ce37570d764bb8d00698903211fee8">mount</a> (spiffs_check_callback callback)</td></tr>
-<tr class="memdesc:a55ce37570d764bb8d00698903211fee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount the file system.  <a href="#a55ce37570d764bb8d00698903211fee8">More...</a><br /></td></tr>
-<tr class="separator:a55ce37570d764bb8d00698903211fee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8a4653a7da883350889f4440d75b7ae"><td class="memItemLeft" align="right" valign="top">s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#ad8a4653a7da883350889f4440d75b7ae">mount</a> (spiffs_check_callback callback=0)</td></tr>
+<tr class="memdesc:ad8a4653a7da883350889f4440d75b7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount the file system.  <a href="#ad8a4653a7da883350889f4440d75b7ae">More...</a><br /></td></tr>
+<tr class="separator:ad8a4653a7da883350889f4440d75b7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f1b8abb2c89f1935675240430907f7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a2f1b8abb2c89f1935675240430907f7e">unmount</a> ()</td></tr>
 <tr class="memdesc:a2f1b8abb2c89f1935675240430907f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unmount the file system. All file handles will be flushed of any cached writes and closed.  <a href="#a2f1b8abb2c89f1935675240430907f7e">More...</a><br /></td></tr>
 <tr class="separator:a2f1b8abb2c89f1935675240430907f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b82563a5ee08da1af3ff3c838c4031c"><td class="memItemLeft" align="right" valign="top"><a id="a4b82563a5ee08da1af3ff3c838c4031c"></a>
+s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a4b82563a5ee08da1af3ff3c838c4031c">mountAndFormatIfNecessary</a> (spiffs_check_callback callback=0)</td></tr>
+<tr class="memdesc:a4b82563a5ee08da1af3ff3c838c4031c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mount the file system and format if necessary. <br /></td></tr>
+<tr class="separator:a4b82563a5ee08da1af3ff3c838c4031c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31500330ba98a081bc7b41f027406bf0"><td class="memItemLeft" align="right" valign="top">s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a31500330ba98a081bc7b41f027406bf0">format</a> ()</td></tr>
 <tr class="memdesc:a31500330ba98a081bc7b41f027406bf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Format the file system.  <a href="#a31500330ba98a081bc7b41f027406bf0">More...</a><br /></td></tr>
 <tr class="separator:a31500330ba98a081bc7b41f027406bf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a377b6476c59d353cedc0c666a3998af4"><td class="memItemLeft" align="right" valign="top">s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a377b6476c59d353cedc0c666a3998af4">erase</a> ()</td></tr>
 <tr class="memdesc:a377b6476c59d353cedc0c666a3998af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erase the sectors used by the file system. Obviously all data will be lost.  <a href="#a377b6476c59d353cedc0c666a3998af4">More...</a><br /></td></tr>
 <tr class="separator:a377b6476c59d353cedc0c666a3998af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25ccc49f136c3e29d841a99625cb551d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#a25ccc49f136c3e29d841a99625cb551d">flush</a> ()</td></tr>
+<tr class="memdesc:a25ccc49f136c3e29d841a99625cb551d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush all cached writes for all file handles, but leave the files open and the volume mounted.  <a href="#a25ccc49f136c3e29d841a99625cb551d">More...</a><br /></td></tr>
+<tr class="separator:a25ccc49f136c3e29d841a99625cb551d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2714880969a1b6625de152105e291f5"><td class="memItemLeft" align="right" valign="top">s32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_spiffs_particle.html#ac2714880969a1b6625de152105e291f5">creat</a> (const char *path, spiffs_mode mode=0777)</td></tr>
 <tr class="memdesc:ac2714880969a1b6625de152105e291f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new file.  <a href="#ac2714880969a1b6625de152105e291f5">More...</a><br /></td></tr>
 <tr class="separator:ac2714880969a1b6625de152105e291f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,6 +469,35 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a id="a25ccc49f136c3e29d841a99625cb551d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25ccc49f136c3e29d841a99625cb551d">&#9670;&nbsp;</a></span>flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SpiffsParticle::flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flush all cached writes for all file handles, but leave the files open and the volume mounted. </p>
+<p>You'd typically do this before doing a stop mode sleep (pin + time) where the RAM contents are preserved but you want to make sure the data is saved. This saves having to mount the volume again.</p>
+<p>If you are using SLEEP_MODE_DEEP you should use <a class="el" href="class_spiffs_particle.html#a2f1b8abb2c89f1935675240430907f7e" title="Unmount the file system. All file handles will be flushed of any cached writes and closed...">unmount()</a> instead. </p>
+
+</div>
+</div>
 <a id="a31500330ba98a081bc7b41f027406bf0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31500330ba98a081bc7b41f027406bf0">&#9670;&nbsp;</a></span>format()</h2>
 
@@ -714,8 +750,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="a55ce37570d764bb8d00698903211fee8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55ce37570d764bb8d00698903211fee8">&#9670;&nbsp;</a></span>mount()</h2>
+<a id="ad8a4653a7da883350889f4440d75b7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8a4653a7da883350889f4440d75b7ae">&#9670;&nbsp;</a></span>mount()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -724,7 +760,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
           <td class="memname">s32_t SpiffsParticle::mount </td>
           <td>(</td>
           <td class="paramtype">spiffs_check_callback&#160;</td>
-          <td class="paramname"><em>callback</em></td><td>)</td>
+          <td class="paramname"><em>callback</em> = <code>0</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1280,7 +1316,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 <p>Sets the desired not of cache pages (default: 2) </p>
 <p>The cache requires (logical page size + 32) * cachePages + 40 bytes. For the default logical page size of 256 and cache pages of 2, this is 616 bytes allocated at mount time.</p>
-<p>Note that you must call this before <a class="el" href="class_spiffs_particle.html#a55ce37570d764bb8d00698903211fee8" title="Mount the file system. ">mount()</a>. Calling it after will have no effect. </p>
+<p>Note that you must call this before <a class="el" href="class_spiffs_particle.html#ad8a4653a7da883350889f4440d75b7ae" title="Mount the file system. ">mount()</a>. Calling it after will have no effect. </p>
 
 </div>
 </div>
@@ -1397,7 +1433,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 <p>Sets the maximum number of open files (default: 4) </p>
 <p>Each open file descriptor requires 32 bytes of RAM. For the default of 4, this is 128 bytes allocated at mount time.</p>
-<p>Note that you must call this before <a class="el" href="class_spiffs_particle.html#a55ce37570d764bb8d00698903211fee8" title="Mount the file system. ">mount()</a>. Calling it after will have no effect. </p>
+<p>Note that you must call this before <a class="el" href="class_spiffs_particle.html#ad8a4653a7da883350889f4440d75b7ae" title="Mount the file system. ">mount()</a>. Calling it after will have no effect. </p>
 
 </div>
 </div>

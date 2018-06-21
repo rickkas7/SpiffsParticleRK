@@ -81,7 +81,12 @@ void loop() {
 			// Note: The technique here only works without system thread enabled, see:
 			// https://community.particle.io/t/electron-sleep-mode-deep-tips-and-examples/27823
 			Cellular.on();
+
+			Cellular.off();
+
+			delay(5000);
 		}
+
 
 		System.sleep(SLEEP_MODE_DEEP, SLEEP_PERIOD_SEC);
 	}
