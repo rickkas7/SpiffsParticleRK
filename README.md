@@ -86,7 +86,7 @@ For the primary SPI (SPI):
 | SS   | CS             | A2           | White         |
 | SCK  | CLK            | A3           | Orange        |
 | MISO | DO             | A4           | Blue          |
-| MOSI | D1             | A5           | Green         |
+| MOSI | DI             | A5           | Green         |
 
 
 For the secondary SPI (SPI1):
@@ -96,7 +96,7 @@ For the secondary SPI (SPI1):
 | SS   | CS             | D5           | White         |
 | SCK  | CLK            | D4           | Orange        |
 | MISO | DO             | D3           | Blue          |
-| MOSI | D1             | D2           | Green         |
+| MOSI | DI             | D2           | Green         |
 
 Note that the SS/CS line can be any available GPIO pin, not just the one specified in the table above.
 
