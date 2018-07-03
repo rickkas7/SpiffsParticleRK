@@ -1,4 +1,14 @@
 - build: examples/1-simple-SpiffsParticleRK
-  photon: [0.7.0]
+  photon: [0.6.3, 0.7.0, 0.8.0-rc.8]
   p1: [latest]
-  
+  electron: [latest]
+- build: examples/2-self-test-SpiffsParticleRK
+  photon: [latest]
+- build: examples/3-stop-sleep-SpiffsParticleRK
+  photon: [latest]
+- build: examples/4-deep-sleep--SpiffsParticleRK
+  photon: [latest]
+- build: examples/5-benchmark-SpiffsParticleRK
+  photon: [latest]
+
+   
