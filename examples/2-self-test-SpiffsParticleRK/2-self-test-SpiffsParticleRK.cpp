@@ -8,14 +8,15 @@ SYSTEM_THREAD(ENABLED);
 // SYSTEM_MODE(SEMI_AUTOMATIC);
 
 // Pick a debug level from one of these two:
-// SerialLogHandler logHandler;
-SerialLogHandler logHandler(LOG_LEVEL_TRACE);
+SerialLogHandler logHandler;
+// SerialLogHandler logHandler(LOG_LEVEL_TRACE);
 
 // Chose a flash configuration:
-SpiFlashISSI spiFlash(SPI, A2); 		// ISSI flash on SPI (A pins)
+// SpiFlashISSI spiFlash(SPI, A2); 		// ISSI flash on SPI (A pins)
 // SpiFlashISSI spiFlash(SPI1, D5);		// ISSI flash on SPI1 (D pins)
 // SpiFlashMacronix spiFlash(SPI1, D5);	// Macronix flash on SPI1 (D pins), typical config for E series
 // SpiFlashWinbond spiFlash(SPI, A2);	// Winbond flash on SPI (A pins)
+SpiFlashWinbond spiFlash(SPI1, D5);	// Winbond flash on SPI1 (D pins)
 // SpiFlashP1 spiFlash;					// P1 external flash inside the P1 module
 
 SpiffsParticle fs(spiFlash);

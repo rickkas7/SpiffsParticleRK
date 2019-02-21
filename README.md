@@ -6,7 +6,7 @@
 
 The [excellent SPIFFS library](https://github.com/pellepl/spiffs) provides a simple file system on a NOR flash chip. This is a port of the library for the Particle platform, with a few convenience helpers to make using it easier from C++ and using standard Particle/Arduino/Wiring APIs.
 
-Both the original SPIFFS library and this port and MIT licensed, so you can use them in open-source or in closed-source commercial products without a fee or license.
+Both the original SPIFFS library and this port are MIT licensed, so you can use them in open-source or in closed-source commercial products without a fee or license.
 
 The full browsable API documentation can be found [here](http://rickkas7.github.io/SpiffsParticleRK/). 
 

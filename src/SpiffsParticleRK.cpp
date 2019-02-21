@@ -10,7 +10,7 @@
 
 #include "SpiffsParticleRK.h"
 
-Logger log("app.spiffs");
+static Logger log("app.spiffs");
 
 static os_mutex_t _spiffsMutex = []() {
 	os_mutex_t m;
