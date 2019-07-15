@@ -293,6 +293,7 @@ The 2-self-test example runs a bunch of tests to verify functionality. It also s
 
 The 3-stop-sleep example shows how to use stop mode sleep (pin + time) to efficiently and safely manage the flash. Since stop mode sleep preserves the contents of RAM, you don't need to re-mount the file system or even the close and open the files. You can just continue where you left off.
 
+The 6-list-files examples shows how to list the files on the flash. There are no subdirectories; only the single root directory.
 
 ## Benchmarking
 
