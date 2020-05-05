@@ -136,7 +136,7 @@ public:
 	 * - SPIFFS_SEEK_CUR the current file position
 	 * - SPIFFS_SEEK_END the end of the file
 	 *
-	 * @return SPIFFS_OK (0) on success, or a negative SPIFFS_ERR code.
+	 * @return The resulting file offset or a negative SPIFFS_ERR code.
 	 *
      * This is a wrapper for the SPIFFS call, which emulates the Unix/POSIX API.
      */

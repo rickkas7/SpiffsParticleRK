@@ -393,3 +393,9 @@ The RAM usage is dependent on various settings.
 
 This memory is freed if you unmount, though in most cases you'll keep the volume mounted all of the time.
 	 
+# Version History
+
+### 0.0.6 (2020-05-04)
+
+- Updated to SpiFlashRK 0.0.6
+

@@ -1,5 +1,5 @@
 - build: examples/1-simple-SpiffsParticleRK
-  photon: [0.6.3, 0.7.0, 0.8.0-rc.8]
+  photon: [0.6.3, 0.7.0, 1.5.1-rc.1]
   p1: [latest]
   electron: [latest]
 - build: examples/2-self-test-SpiffsParticleRK
