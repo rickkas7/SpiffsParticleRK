@@ -395,7 +395,7 @@ This memory is freed if you unmount, though in most cases you'll keep the volume
 	 
 # Version History
 
-### 0.0.6 (2020-05-04)
+### 0.0.7 (2020-05-04)
 
 - Updated to SpiFlashRK 0.0.6
 
