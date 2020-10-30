@@ -392,8 +392,17 @@ The RAM usage is dependent on various settings.
 * Thus the total RAM allocated during mount is by default is 1256 bytes
 
 This memory is freed if you unmount, though in most cases you'll keep the volume mounted all of the time.
-	 
+
+
 # Version History
+
+### 0.0.8 (2020-10-29)
+
+- Updated to SpiFlashRK 0.0.8, fixes SPI transactions and add 32-bit addressing support
+- Added new large file test code (example 7).
+- Note: File systems are still limited to 16 Mbytes, however on a 32 Mbyte flash chip you
+can now use the upper half as a file system.
+
 
 ### 0.0.7 (2020-05-04)
 

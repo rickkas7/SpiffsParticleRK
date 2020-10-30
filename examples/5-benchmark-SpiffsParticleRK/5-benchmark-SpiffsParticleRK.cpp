@@ -3,6 +3,7 @@
 #include "SpiffsParticleRK.h"
 
 SYSTEM_THREAD(ENABLED);
+SYSTEM_MODE(MANUAL);
 
 SerialLogHandler logHandler(LOG_LEVEL_WARN, { // Logging level for non-application messages
     { "app", LOG_LEVEL_INFO }, // Default logging level for all application messages
@@ -16,6 +17,7 @@ SerialLogHandler logHandler(LOG_LEVEL_WARN, { // Logging level for non-applicati
 // SpiFlashMacronix spiFlash(SPI1, D5);	// Macronix flash on SPI1 (D pins), typical config for E series
 SpiFlashWinbond spiFlash(SPI, A2);	// Winbond flash on SPI (A pins)
 // SpiFlashP1 spiFlash;					// P1 external flash inside the P1 module
+
 
 // Create an object for the SPIFFS file system
 SpiffsParticle fs(spiFlash);

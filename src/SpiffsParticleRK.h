@@ -269,6 +269,9 @@ public:
 	 * This can't be smaller than the physical block size or sector size (4096), but it could be larger. Making it
 	 * larger might make sense if you have a small number of really large files, but usually 4096 is a reasonable
 	 * value.
+	 * 
+	 * The logical block number is a uint16_t (0-65535) so at 4096 bytes this supports a file system up to 
+	 * 268,435,456 bytes (256 Mbyte). Large file systems will require a larger logical block size.
 	 */
 	inline SpiffsParticle &withLogicalBlockSize(size_t value) { config.log_block_size = value; return *this; };
 
@@ -277,8 +280,13 @@ public:
 	 *
 	 * This must be greater than or equal to the physical page size, which is typically 256 for most flash chips.
 	 * Note that there's a work buffer of 2 * logical page size required for mounting a volume. It's rarely helpful
-	 * to change this from the default, and it can't be larger than the logical block size, and doesn't really make
-	 * any sense to make it larger than the physical block size (4096 bytes). So just leave it at 256.
+	 * to change this from the default except for large flash chips. It can't be larger than the logical block size.
+	 * 
+	 * The logical page number is a uint16_t (0-65535) so at 256 bytes, this supports a file system up to 
+	 * 16,777,216 bytes (16 Mbyte). 
+	 * 
+	 * For a large flash chip (256 Mbit/32 Mbyte, like the MX25L25645G) you can set the logical page size to 512
+	 * to allow the use of the whole chip.
 	 */
 	inline SpiffsParticle &withLogicalPageSize(size_t value) { config.log_page_size = value; return *this; };
 
