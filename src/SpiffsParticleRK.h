@@ -244,6 +244,8 @@ public:
 	SpiffsParticle(SpiFlashBase &flash);
 	virtual ~SpiffsParticle();
 
+#if SPIFFS_SINGLETON == 0
+
 	/**
 	 * @brief Sets the size of the flash file system in bytes, relative to the physical start address.
 	 */
@@ -289,6 +291,8 @@ public:
 	 * to allow the use of the whole chip.
 	 */
 	inline SpiffsParticle &withLogicalPageSize(size_t value) { config.log_page_size = value; return *this; };
+
+#endif // SPIFFS_SINGLETON == 0
 
 	/**
 	 * @brief Sets the maximum number of open files (default: 4)
