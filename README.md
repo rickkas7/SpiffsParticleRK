@@ -396,6 +396,10 @@ This memory is freed if you unmount, though in most cases you'll keep the volume
 
 # Version History
 
+### 0.0.9 (2024-05-09)
+
+- Fixed a compile error on newer version of Device OS caused by a variable named `log`.
+
 ### 0.0.8 (2020-10-29)
 
 - Updated to SpiFlashRK 0.0.8, fixes SPI transactions and add 32-bit addressing support
